@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+.startPage{
+    width:100%;
+    z-index: 100;
+    height:660px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.startBtn{
+    display: none; 
+    background-image: url('img/start.png ');
+    height:70px;
+    width:70px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin:auto;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.wrapper{
+    width: 60%;
+    height: 650px;
+    background-image: url('img/background.png');
+    background-size: 100% 100%;
+    position:  relative;    
+    left: 20%;
+    /* border: 2px solid red; */
+}
+.lift-side{
+     widows: 20px;
+     height:660px;
+     position: absolute;
+     /* border-right: 10px solid black; */
+}
+.lift-side img{
+    /* display: none; */
+    margin-left: 50px;
+    margin-top: 50px;
+    width:70px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow:2px 2px 5px 1px rgb(9, 139, 199);
+    cursor: pointer;
+}
+.lift-side img:hover{
+    /* box-shadow:2px 2px 5px 1px rgb(9, 139, 199); */
+    color:#ddd;
+    cursor: pointer;
+}
+.main{
+    position: absolute;
+    left:12%;
+    width:75%;
+    height:100%;
+    /* border : 1px solid black; */
+}   
+.header{
+     width:100%;
+     height:80px;
+     text-align: center;
+}
+.score{
+    line-height: 130px;
+    color:rgb(141, 135, 135);
+    font-size: 30px;
+    font-weight: border;
+}
+.content{
+    position: absolute;
+    width:99%;
+    height:70.5%;
+    left:0%;
+    top:13%;
+    /* border:2px solid blue; */
+}
+.loser{
+    display: none;
+    position: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+}
+.con{
+    /* display: none; */
+    background-image: url('img/gameover.jpg');
+    background-size: 100% 100%;
+    height:200px;
+    width:300px;
+    position: absolute;
+    margin:auto;
+    /* 必须设置四个距离为0 才能用auto */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* border: 1px solid red; */
+}
+.loserScore{
+    display: block; 
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 22%;
+    left: 75%;
+    color:#f40;
+    font-size: 30px;
+    font-weight: border;
+}
+.dangqiandefen{
+    margin-left: 50px;
+    color:#f40;
+    font-size: 30px;
+}
+.loser .con .close {
+    display: block;
+    z-index: 101;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    /* background-color: red; */
+    background-image: url('img/cha.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+.loser .con .close:hover{
+    box-shadow:4px 3px 10px 1px rgb(192, 49, 49);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.food{
+    background-image: url('img/apple.png');
+    background-size: 100% 100%;
+    
+}
+.head{
+    background-image: url('img/head.png');
+    background-size: 100% 100%;
+}
+.body{
+    background-image: url('img/body1.png');
+    background-size: 100% 100%;
+}
