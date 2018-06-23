@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function aa(index,dddd) {
+      console.log(this);
+      console.log(index);
+      console.log(dddd);
+  }
+  var person={
+      name:"xiaohong",
+      age:"11"
+  };
+  //aa();
+  aa.call(person,"11","222");
+  aa.apply(person,["11","222"]);
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #box ul ul {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <ul>
+      <li>
+        <div>标题1</div>
+        <!--ddd-->
+        <ul style="display: none">
+          <li>1</li>
+          <li>3</li>
+          <li>2</li>
+        </ul>
+      </li>
+      <li>
+        <div>标题</div>
+        <ul style="display: none">
+          <li>1</li>
+          <li>3</li>
+          <li>2</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div style="width: 200px;height: 200px;background: #000;" id="box2"></div>
+  <script>
+    var oBox = document.getElementById("box");
+    var aDiv = oBox.getElementsByTagName("div");
+
+    for(var i=0;i<aDiv.length;i++){
+        aDiv[i].onclick = function (e) {
+            console.log(e);
+            var thisNext =  next(this);
+            if(thisNext.style.display == "none"){
+                thisNext.style.display="block";
+            }else{
+                thisNext.style.display="none";
+            }
+
+        }
+    }
+
+    var oBox2 = document.getElementById("box2");
+
+     oBox2.onmousedown = function (e) {
+         console.log(e);
+     }
+
+    oBox2.onmousemove = function (e) {
+        console.log(e);
+    }
+
+    oBox2.onmouseup = function (e) {
+        console.log(e);
+    }
+    
+
+
+
+
+
+
+
+
+
+    function next(obj) {
+       var thisObj = obj;
+       do{
+          thisObj=thisObj.nextSibling;
+       }while (thisObj && thisObj.nodeType!=1);
+       return thisObj;
+    }
+
+
+  </script>
+</body>
+</html>

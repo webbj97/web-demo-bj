@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .div1{
+      width: 400px;
+      height: 400px;
+      background: yellow;
+    }
+    .div2{
+      width: 300px;
+      height: 300px;
+      background: red;
+    }
+    .div3{
+      width: 200px;
+      height: 200px;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+<div class="div1" id="div1">
+  <div class="div2" id="div2">
+    <div class="div3" id="div3">11 </div>
+  </div>
+</div>
+<p id="p1">sdasdsdasad</p>
+<script>
+
+  var oDiv1 = document.getElementById("div1");
+  var oDiv2 = document.getElementById("div2");
+  var oDiv3 = document.getElementById("div3");
+  var oP1 = document.getElementById("p1");
+
+//  oDiv1.onclick = function () {
+//      console.log("div1");
+//  }
+//  oDiv2.onclick = function () {
+//      console.log("div2");
+//  }
+//  oDiv3.onclick = function () {
+//      console.log("div3");
+//  }
+//  oDiv3.onclick = function () {
+//      console.log("div3-1");
+//  }
+//  oDiv3.onclick = function (e) {
+//      console.log("div3-1");
+//  }
+//  function fn1() {
+//      console.log("1");
+//      oDiv3.removeEventListener("click",fn1);
+//  }
+//  function fn1() {
+//      console.log("div3");
+//  }
+//  oDiv3.addEventListener("click",fn1,false);
+//  oDiv3.removeEventListener("click",fn1,false);
+
+//  oDiv3.addEventListener("click",function () {
+//      console.log(this);
+//      console.log("div3");
+//  });
+//  oDiv2.addEventListener("click",function () {
+//      console.log("div2");
+//  });
+//  oDiv1.addEventListener("click",function () {
+//      console.log("div1");
+//  });
+
+//  function fn1() {
+//
+//      console.log(1);
+//  }
+//  function fn1() {
+//      console.log("div3");
+//  }
+//  function fn2() {
+//      console.log("div2");
+//  }
+//  function fn3() {
+////      console.log("div3");
+//      console.log(this);
+//
+//  }
+//
+//  oDiv3.attachEvent("onclick",function () {
+//      fn3.call(oDiv3);
+//  });
+//  oDiv3.attachEvent("onclick",fn1);
+//  oDiv2.attachEvent("onclick",fn2);
+
+//    oDiv2.addEventListener("click",fn2);
+//    oDiv2.removeEventListener("click",fn2);
+//
+//    oDiv2.attachEvent("onclick",fn2);
+//    oDiv2.detachEvent("onclick",fn2);
+//
+//    oDiv3.onclick = function () {
+//
+//    }
+//
+//    oDiv3.onclick = null;
+
+  //事件捕获
+
+//  oDiv3 = function () {
+//      console.log("div3");
+//  }
+
+  function fn3() {
+      console.log("3");
+  }
+  function fn2() {
+      console.log("2");
+  }
+  function fn1() {
+      console.log("1");
+  }
+
+
+
+
+
+
+  addEvent(oDiv1,"click",fn3);
+  addEvent(oDiv1,"click",fn2);
+  addEvent(oDiv1,"click",fn1);
+
+
+//  removeEvent(oDiv1,"click",fn1);
+//  removeEvent(oDiv1,"click",fn2);
+  //var thisFun;
+  function addEvent(elem,eve,fun) {
+      if(elem.addEventListener){//能力测试
+          elem.addEventListener(eve,fun);
+      }else if(elem.attachEvent){
+          elem[fun]= function () {
+              fun.call(elem);
+          };
+          elem.attachEvent("on"+eve,elem[fun]);
+      }else{
+          elem["on"+eve] = fun;
+      }
+
+  }
+
+  function removeEvent(elem,eve,fun) {
+      if(elem.removeEventListener){//能力测试
+          elem.removeEventListener(eve,fun);
+      }else if(elem.detachEvent){
+          elem.detachEvent("on"+eve,elem[fun]);
+      }else{
+          elem["on"+eve] = null
+      }
+  }
+
+</script>
+</body>
+</html>

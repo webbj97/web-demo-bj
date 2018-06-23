@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>无缝滚动</title>
+  <style>
+    *{
+      margin:0;
+      padding:0
+    }
+    ul{
+      list-style-type: none;
+    }
+    .clearfix:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .slider-box{
+      width: 430px;
+      height: 100px;
+      margin:100px auto;
+      border:1px solid #dddddd;
+      padding:10px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    ul{
+      width: 550px;
+      position: absolute;
+    }
+    ul li{
+      color: #ffffff;
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 100px;
+      background-color: #000000;
+    }
+    .btn-bar{
+      width: 200px;
+      text-align: center;
+      margin:0 auto;
+    }
+    .btn-bar button{
+      padding:20px;
+      font-size: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-box">
+    <ul class="clearfix">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+  <div class="btn-bar">
+    <button id="next">向左</button>
+    <button id="prev">向右</button>
+  </div>
+  <script>
+
+    var oUl = document.getElementsByTagName("ul")[0];
+    var oPrev = document.getElementById("prev");
+    var oNext = document.getElementById("next");
+    var dirction = -10;
+
+    oUl.innerHTML+=oUl.innerHTML;
+    oUl.style.width = oUl.offsetWidth*2+"px";
+
+    setInterval(function () {
+
+      oUl.style.left = oUl.offsetLeft +dirction + "px";
+      if(oUl.offsetLeft <= -oUl.offsetWidth/2){
+        oUl.style.left = 0;
+      }
+      if(oUl.offsetLeft > 0){
+        oUl.style.left = -oUl.offsetWidth/2+"px";
+      }
+    },50);
+
+    oPrev.onclick = function () {
+        dirction = -10;
+    }
+
+    oNext.onclick = function () {
+        dirction = 10;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    var thisKey = -5;
+//    var isRun = false;
+//    oUl.innerHTML+=oUl.innerHTML;
+//    oUl.style.width = oUl.offsetWidth * 2+2+"px";
+//
+//    oPrev.onclick = function () {
+//        thisKey = 5;
+//        isRun = true;
+//    }
+//
+//    oNext.onclick = function () {
+//        thisKey = -5
+//        isRun = true;
+//    }
+//
+//    setInterval(function () {
+//      if(isRun){
+//        oUl.style.left = oUl.offsetLeft+thisKey+"px";
+//        if(oUl.offsetLeft <= -oUl.offsetWidth/2){
+//            oUl.style.left = 0;
+//        }
+//        if(oUl.offsetLeft >0){
+//            oUl.style.left = -oUl.offsetWidth/2+6+"px";
+//        }
+//      }
+//    },30);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button id="btn1">添加</button>
+<ul id="ul1">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+<button id="btn">append</button>
+<div id="box">
+  <div id="div2">22</div>
+  <div id="div1">11</div>
+</div>
+<script>
+  var oUl = document.getElementById("ul1");
+  var oLi = oUl.getElementsByTagName("li");
+  var oBox = document.getElementById("box");
+  var oDiv1 = document.getElementById("div1");
+  var oBtn = document.getElementById("btn");
+  var oBtn1 = document.getElementById("btn1");
+
+
+  var oText = document.createTextNode("hello");
+
+
+//  oBtn1.onclick=function () {
+//      var oNewNode = document.createElement("li");
+//      oNewNode.innerHTML=Math.random();
+//      oUl.appendChild(oNewNode);
+//  }
+
+
+//  oBtn.onclick=function () {
+//      oBox.appendChild(oDiv1);
+//  }
+
+//for(var i =0;i<oLi.length;i++){
+//      oLi[i].onclick = function () {
+//          console.log(this.innerHTML);
+//      }
+//}
+
+  oUl.onclick = function (e) {
+      //var This =window.event.srcElement || e.target;
+
+      console.log(e.currentTarget);
+      console.log(e.target);
+      console.log(this);
+  }
+
+
+</script>
+</body>
+</html>

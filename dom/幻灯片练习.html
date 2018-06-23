@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自动播放——幻灯片效果</title>
+  <style>
+    body,div,ul,li{margin:0;padding:0;}
+    ul{list-style-type:none;}
+    body{background:#000;text-align:center;font:12px/20px Arial;}
+    #box{position:relative;width:492px;height:172px;background:#fff;border-radius:5px;border:8px solid #fff;margin:10px auto;}
+    #box .list{position:relative;width:490px;height:170px;overflow:hidden;border:1px solid #ccc;}
+    #box .list li{position:absolute;top:0;left:0;width:490px;height:170px;opacity:0;}
+    #box .list li.active{opacity:1;}
+    #box .count{position:absolute;right:0;bottom:5px;}
+    #box .count li{color:#fff;float:left;width:20px;height:20px;cursor:pointer;margin-right:5px;overflow:hidden;background:#F90;opacity:0.7;border-radius:20px;}
+    #box .count li.active{color:#fff;opacity:1;font-weight:700;background:#f60;}
+    .arr-btn{position: absolute;left:10px;bottom: 5px;width: 60px}
+    .arr-btn li{}
+  </style>
+
+</head>
+<body>
+<div id="box">
+  <ul class="list" id="img-list">
+    <li class="active"><img src="image/01.jpg" width="490" height="170"></li>
+    <li><img src="image/02.jpg" width="490" height="170"></li>
+    <li><img src="image/03.jpg" width="490" height="170"></li>
+    <li><img src="image/04.jpg" width="490" height="170"></li>
+    <li><img src="image/05.jpg" width="490" height="170"></li>
+  </ul>
+  <ul class="count" id="num-bar">
+    <li class="active">1</li>
+    <li class="">2</li>
+    <li class="">3</li>
+    <li class="">4</li>
+    <li class="">5</li>
+  </ul>
+  <ul class="arr-btn count" id="left-btn">
+    <li this-type="prev">&lt;</li>
+    <li this-type="next">&gt;</li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var oBox = document.getElementById("box");
+  var aImg = document.getElementById("img-list").getElementsByTagName("li");
+  var aNum = document.getElementById("num-bar").getElementsByTagName("li");
+  var aBtn = document.getElementById("left-btn").getElementsByTagName("li");
+  var globalIndex = 0;
+  var isInterval = true;
+
+  setInterval(function () {
+      if(isInterval){
+          changeImg(globalIndex+1);
+      }
+  },1000);
+  
+  oBox.onmouseover = function () {
+      isInterval =false;
+  }
+  oBox.onmouseout = function () {
+      isInterval =true;
+  }
+
+  for(var k=0;k<aBtn.length;k++){
+      aBtn[k].onclick = function () {
+          var thisBtn= this.getAttribute("this-type");
+          if(thisBtn == "next"){
+              changeImg(globalIndex+1);
+          }else{
+              changeImg(globalIndex-1);
+          }
+      }
+  }
+
+  for(var i=0;i<aNum.length;i++) {
+      aNum[i].index = i;
+      aNum[i].onmouseover = function () {
+          changeImg(this.index);
+      }
+  }
+  function changeImg(index) {
+      if(index == 5){
+          index =0;
+      }else if(index == -1){
+          index =4;
+      }
+      for(var j=0;j<aNum.length;j++){
+          aNum[j].className="";
+          aImg[j].style.opacity =0;
+      }
+      aNum[index].className = "active";
+      aImg[index].style.opacity = 1;
+      globalIndex = index;
+      console.log(globalIndex);
+  }
+
+</script>
+</body>
+</html>
