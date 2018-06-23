@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="fdj.css">
+</head>
+<body>
+
+    <div class="small-img">
+        <img src="DY1.png" alt="">
+        <div class="move-bar"></div>
+    </div>
+    <div class="big-img">
+        <img src="DY1.png" alt="">
+    </div>
+
+<script>
+    var oBigBox = document.getElementsByClassName("big-img")[0];
+    var oBigImg = document.getElementsByClassName("big-img")[0].getElementsByTagName("img")[0];
+    var oMove = document.getElementsByClassName("move-bar")[0];
+    var oSmallImg = document.getElementsByClassName("small-img")[0];
+
+    oSmallImg.onmousemove =function (e) {
+        var thisX = e.clientX - 100;
+        var thisY = e.clientY - 100;
+        if(thisX <0){
+            thisX = 0;
+        }
+        if(thisY<0){
+            thisY = 0;
+        }
+        var maxLeft = oSmallImg.offsetWidth - oMove.offsetWidth;
+        var maxTop = oSmallImg.offsetHeight - oMove.offsetHeight;
+        if(thisX>maxLeft){
+            thisX = maxLeft;
+        }
+        if(thisY>maxTop){
+            thisY = maxTop;
+        }
+        oMove.style.left = thisX+"px";
+        oMove.style.top = thisY+"px";
+        oBigImg.style.left = -thisX*2+"px";
+        oBigImg.style.top = -thisY*2+"px";
+    }
+
+
+</script>
+    
+</body>
+</html>
