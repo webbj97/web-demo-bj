@@ -1,0 +1,52 @@
+.kuang{
+    width:900px;
+    height:600px;
+    border: 2px solid black
+    /* background-color: red; */
+}
+h3{
+    width:200px;
+    margin-left: 33px;
+}
+
+body {
+    margin:1em 10%;
+    background-color:#ccc;
+}
+h1{
+    width:350px;
+    color:#333;
+    background-color: transparent;
+}
+ul li a{
+    position: absolute;
+    color:#f40;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+ul{
+    padding: 0;
+}
+li{
+    width:60px;
+    height:20px;
+    float: left;
+    list-style: none;
+    padding: 1em;
+}
+img{
+    float: left;
+    margin-top:70px;
+    display: block;   
+}
+#description{
+    position: relative;
+    float: left;
+    color: blue;
+    margin-left:50%;
+}
+h1 p{
+    margin-left: 30px;
+}
