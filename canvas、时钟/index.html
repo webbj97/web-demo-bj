@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        #clock {
+            /* border: 1px solid #000; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas id="clock" height="400px" width="400px"></canvas>
+
+    </div>
+
+    <script>
+        var dom = document.getElementById("clock");
+        var ctx = dom.getContext("2d");
+        var width = ctx.canvas.width;
+        var height = ctx.canvas.height;
+        var r = width / 2;
+        var BL = width / 200;
+
+        function drawBackGrounf() {
+            ctx.save();//保存一下最开始时钟的环境
+            ctx.translate(r, r);//矩形的中心点
+            ctx.beginPath();
+            ctx.lineWidth = 10 * BL;//线要 乘上 比例
+            ctx.arc(0, 0, r - ctx.lineWidth / 2, 2 * Math.PI, false);//乘上比例
+            ctx.stroke();
+            // ctx.fillStyle="#00000a";
+            // ctx.fill();
+
+            var hourNumber = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
+            ctx.font = 18 * BL + 'px Arial';//字体也有乘比例 字符串拼接
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            hourNumber.forEach(function (number, i) {
+                var rad = 2 * Math.PI / 12 * i;
+                var x = Math.cos(rad) * (r - 30 * BL);
+                var y = Math.sin(rad) * (r - 30 * BL);
+                ctx.fillText(number, x, y);
+            });
+
+            for (var i = 0; i < 60; i++) {
+                var rad = 2 * Math.PI / 60 * i;
+                var x = Math.cos(rad) * (r - 18 * BL);
+                var y = Math.sin(rad) * (r - 18 * BL);
+                ctx.beginPath();
+                if (i % 5 == 0) {
+                    ctx.fillStyle = '#000';
+                    ctx.arc(x, y, 2 * BL, 0, 2 * Math.PI, false);
+                } else {
+                    ctx.fillStyle = '#ccc';
+                    ctx.arc(x, y, 2 * BL, 0, 2 * Math.PI, false);
+                }
+
+                ctx.fill();
+            }
+        }
+
+        function drawHour(hour, minute) {
+            ctx.save(); //保存我们当前的环境
+            ctx.beginPath();
+            var rad = 2 * Math.PI / 12 * hour;//需要旋转的弧度；
+            var mrad = 2 * Math.PI / 12 / 60 * minute;
+            ctx.rotate(rad + mrad);//旋转
+            ctx.lineWidth = 6 * BL;//定义指针的宽
+            ctx.lineCap = 'round';//指针顶部为弧
+            ctx.moveTo(0, 10 * BL);
+            ctx.lineTo(0, -r / 2 );
+            ctx.stroke();
+            ctx.restore();//还原我们画小时之前的状态
+        }
+
+        function drawMinutes(minutes) {
+            ctx.save();
+            ctx.beginPath();
+            var rad = 2 * Math.PI / 60 * minutes;//需要旋转的弧度；
+            ctx.rotate(rad);//旋转
+            ctx.lineWidth = 3 * BL;//定义指针的宽
+            ctx.lineCap = 'round';//指针顶部为弧
+            ctx.moveTo(0, 10 * BL);
+            ctx.lineTo(0, -r + 30 * BL);
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        function drawSecond(second) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+            var rad = 2 * Math.PI / 60 * second;//需要旋转的弧度；
+            ctx.rotate(rad);//旋转
+            ctx.moveTo(-2 * BL, 20 * BL);//画出一个秒针 x轴-2 y轴20
+            ctx.lineTo(2 * BL, 20 * BL);
+            ctx.lineTo(1, -r + 18 * BL);
+            ctx.lineTo(-1, -r + 18 * BL);
+            ctx.fill();
+            // ctx.stroke();
+            ctx.restore();
+        }
+
+        function drawYd() {//画一个原点
+            ctx.beginPath();
+            ctx.fillStyle = '#fff';
+            ctx.arc(0, 0, 3 * BL, 0, 2 * Math.PI, false);
+            ctx.fill();
+        }
+
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);//每秒清除一下cancas，然后再画出背景、小时、分针、秒针 给他还原
+
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            drawBackGrounf();//画一个表盘
+            drawHour(hour, minute);
+            drawMinutes(minute);
+            drawSecond(second);
+            drawYd();//画一个原点
+            ctx.restore();
+        }
+        draw();
+        setInterval(draw, 1000);
+
+
+    </script>
+</body>
+
+</html>
