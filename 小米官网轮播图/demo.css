@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    position: relative;/* 给绝对定位一个位置参考 */
+    width: 1226px;
+    height: 460px;
+     margin: 0 auto;/*上下 左右 */
+    /* background-color: #3399ff; */
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#banner .item{
+    display: none;
+    position: absolute;/*绝对定位，脱离了文档流*/
+    /* 如果你的父级元素 */
+    top: 0;
+    left: 0;
+}
+.lr-tab img{ 
+    position: absolute;
+    top: 200px;
+    opacity:0.5;
+}
+ .lr-tab .zuo-btn{
+    left: 0;
+    width: 30px;
+    height: 50px;
+}
+.lr-tab .you-btn{
+    right: 0;
+    width: 30px;
+    height: 50px;
+}
+.lr-tab img:hover{
+    opacity:1;
+    cursor: pointer;
+}
+.tab-btn {
+    bottom: 20px;
+    right: 50px;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+}
+.tab-btn .btn{
+    float: left;/*左浮动*/
+    width: 6px;
+    height: 6px;
+    background: #868686;
+    border-radius: 50%;/*边框圆角*/
+    border: 2px solid #c3c3c3;/*边框*/
+    margin-left: 11px;
+}
+.tab-btn .btn:hover{
+    border-color: #7f7f7f;/*单独设置边框颜色*/
+    background: #e4e4e4; 
+    cursor: pointer;
+}
+
+.tab-btn .active{
+    border-color: #7f7f7f;
+    background: #e4e4e4; 
+}
