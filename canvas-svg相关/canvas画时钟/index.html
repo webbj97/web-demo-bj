@@ -12,10 +12,6 @@
             text-align: center;
             margin-top: 150px;
         }
-
-        #clock {
-            /* border: 1px solid #000; */
-        }
     </style>
 </head>
 
@@ -40,8 +36,6 @@
             ctx.lineWidth = 10 * BL;//线要 乘上 比例
             ctx.arc(0, 0, r - ctx.lineWidth / 2, 2 * Math.PI, false);//乘上比例
             ctx.stroke();
-            // ctx.fillStyle="#00000a";
-            // ctx.fill();
 
             var hourNumber = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
             ctx.font = 18 * BL + 'px Arial';//字体也有乘比例 字符串拼接
@@ -137,7 +131,18 @@
             ctx.restore();
         }
         draw();
-        setInterval(draw, 1000);
+        setInterval(function(){
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            drawBackGrounf();//画一个表盘
+            drawHour(hour, minute);
+            drawMinutes(minute);
+            drawSecond(second);
+            drawYd();//画一个原点
+            ctx.restore();
+        }, 1000);
 
 
     </script>
