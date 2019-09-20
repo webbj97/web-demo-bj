@@ -17,22 +17,18 @@
   .small-img img{
     width: 500px;
     height: 500px;
-    /* background-color: blue; */
   }
   .big-img{
-    width:500px;
+    width: 500px;
     height: 500px;
     position: relative;
     overflow: hidden;
-    /*display: none;*/
+    border: 1px solid red
   }
   .big-img img{
-    /* margin-left: 10px; */
     position: absolute;
     width: 1000px;
     height: 1000px;
-    /* background-color: red; */
-
   }
   .move-bar{
     width: 150px;
@@ -40,6 +36,5 @@
     position: absolute;
     top:0;
     left: 0;
-    /*display: none;*/
     background-color: rgba(255,255,255,0.3);
   }

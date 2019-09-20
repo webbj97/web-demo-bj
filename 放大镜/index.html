@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="fdj.css">
+    <title>放大镜</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
     <div class="small-img">
-        <img src="DY1.png" alt="">
+        <img src="1.png" alt="">
         <div class="move-bar"></div>
     </div>
     <div class="big-img">
-        <img src="DY1.png" alt="">
+        <img src="1.png" alt="">
     </div>
 
 <script>
@@ -24,8 +23,9 @@
     var oSmallImg = document.getElementsByClassName("small-img")[0];
 
     oSmallImg.onmousemove =function (e) {
-        var thisX = e.clientX - 100;
+        var thisX = e.clientX - 100;//坐标相对鼠标-100
         var thisY = e.clientY - 100;
+        
         if(thisX <0){
             thisX = 0;
         }
@@ -45,8 +45,6 @@
         oBigImg.style.left = -thisX*2+"px";
         oBigImg.style.top = -thisY*2+"px";
     }
-
-
 </script>
     
 </body>
