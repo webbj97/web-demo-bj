@@ -9,3 +9,8 @@
 ## 有意思的Canvas
 
 [时钟](https://webbj97.github.io/web-demo-bj/canvas-svg%E7%9B%B8%E5%85%B3/canvas%E7%94%BB%E6%97%B6%E9%92%9F/index.html)
+
+## 静态页面
+
+[仿京东官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/京东官网/demo.html)
+[仿淘宝官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/淘宝首屏/淘宝首屏.html)
