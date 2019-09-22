@@ -1,0 +1,369 @@
+/* 导航栏 */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 13px;
+    color:#6C6C6C;
+}
+
+.web-shop{
+    width: 100%
+}
+/* 同步导航部分 */
+.top{
+    background-color:#F5F5F5;
+    /* width: 100%; */
+    height:35px;  
+    padding: 0 100px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top .nav {
+    display: flex;
+}
+.top .nav li{
+    padding: 0 12px;
+    display: flex;
+}
+.top .nav li a{
+    color:#6c6c6c;
+    font-size: 12px;
+    cursor: pointer; 
+}
+.top .nav li .icon-bottom{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin-top: 15px;
+    margin-left: 5px;
+    border-top: 4px solid #aaa;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+.top .nav .orange a{
+    color:#f40;
+}
+.top .nav a:hover{
+    color:#f40;
+    text-decoration: underline;
+}
+
+/*输入框部分 */
+.body{
+    width: 1167px;
+    margin: 0 auto;
+}
+.body .search{
+    height: 121px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body .search .search-logo{
+    width: 180px;
+    height: 100px;
+    background: url(tbw.png) center center;
+    cursor: pointer;
+}
+.body .search .search-box{
+    position: relative;
+    padding-right: 30px;
+}
+.body .search .search-box .search-tab{
+    display: flex;
+    position: absolute;
+    left: 20px;
+    background: #ff5400;
+}
+.body .search .search-box .search-tab a{
+    padding: 4px 6px;
+    display: inline-block;
+    color: #fff;
+
+}
+.body .search .search-box .search-input{
+    display: flex;
+    height: 33px;
+    padding-top: 26px
+}
+.body .search .search-box .search-input input{
+    height:33px;
+    width: 554px;
+    border: 3px solid #ff5400;   
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.body .search .search-box .search-choose{
+    margin-top: 20px;
+}
+
+
+
+/* 列表框和图片区域 */
+.body .shop{
+
+}
+.body .shop .main{
+    position: relative;
+    float: left;
+    width:978px;
+    height:552px;
+    margin-left: 187px;
+    /* border: 1px solid red; */
+    background-color:#F4F4F4;
+}
+
+.body .shop .main .dh ul li a{
+    display: block;
+    font-size: 15px;
+    float: left; 
+    margin-left:17px;
+    margin-top: 3px;
+    font-weight: bold;
+    color:#fff;
+    /* background-color: blue; */
+}
+
+.body .shop .main .dh{
+    width:978px;
+    height:30px;
+    background-color: #ff8700;
+    overflow: hidden;
+}
+
+.body .shop .serve{
+    position: absolute;
+    float: left;
+    width:180px; 
+    height:552px;
+    border: 1px solid #f40;
+    /* background-color: orange; */
+}
+/* 主题市场相关--------------------------------------------------- */
+.body .shop .serve .ztsc{
+    float: left;
+    width: 180px;
+    height:30px;
+    text-align: center;
+    background: #ff5000
+}
+.body .shop .serve .ztsc li {
+    margin-top: 3px;
+}
+.body .shop .serve .ztsc li a{
+    font-size: 16px;
+    color:#fff;
+}
+.body .shop .serve ul li{
+    overflow: hidden;
+    line-height: 37px;
+    height: 37px;
+    padding-left: 25px;
+    padding-right: 19px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    width: 135px;
+    color: #666;
+    /* border: 1px solid red; */
+}
+.body .shop .serve ul li i{
+    color:#6c6c6c;
+}
+.body .shop .serve ul li:hover{
+    background-color: #ffe4dc;
+    color: #FF5000;
+}
+.body .shop .serve ul li a:hover{
+    color:#FF5000;
+}
+
+/* 中间图片区域 -------------------------------------------------*/
+.body .shop .tu1{
+    float: left;
+    margin-top: 10px;
+    width:520px;
+    height:280px;
+    /* background-color: red; */
+    background-image: url(tu1.jpg);
+}
+.body .shop .tu2{
+    overflow: hidden;
+    float: left;
+    margin-top: 10px;
+    width:160px;
+    height:280px;
+    margin-left: 10px;
+    /* background-color: red; */
+    background-image: url(tu2.jpg);
+}
+.body .shop .tu3{
+    position: relative;
+    overflow: hidden;
+    float: left; 
+    margin-top: 20px;
+    width:520px;
+    height:201px;
+    background-image: url(tu3.jpg);
+    /* border: 2px solid red; */
+}
+.body .shop .tu4{
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    width:160px;
+    height:200px;
+    background-image: url(tu4.jpg);
+    /* border: 2px solid red; */
+}
+/*图右Hi图片1*/
+.body .tu-right .hi-nihao{
+  
+    position: relative;
+    height: 97px;
+    width:280px;
+    text-align: center;
+    /* background-image: url(hi.jpg); */
+}
+/*图片下边的登录注册开店*/
+.body .tu-right .dlzckd{
+    margin-left: 8px;
+    width:274px;
+    height: 25px;
+    margin-top: 8px;
+    /* border: 1px solid red; */
+}
+.body .tu-right .dlzckd a{
+    float: left;
+    line-height: 25px;
+    width: 75px;
+    margin-right: 14px;
+    text-align: center;
+    color: #FFF;
+    background-color: #ff5000;
+    border: 1px solid red;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.body .tu-right .hi-nihao a{
+    display: block;
+    width:274px;
+    height:91px;
+    /* background-color: red; */
+    background-image: url(hi.png);
+}
+/*有害信息举报*/
+.body .tu-right .jbzq{
+    margin-left: 8px;
+    width:260px;
+    height: 25px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffe4dd;
+}
+.body .tu-right .jbzq a{
+    /* position: absolute; */
+    color:#f40;
+}
+/*;图右整体布局-------------------------------------*/
+.body .shop  .tu-right{ 
+    position: absolute;;
+    float: left;
+    margin-left: 701px;
+    margin-top: 10px;
+    width:274px;
+    height:510px;
+    /* border: 2px solid black; */
+    background-color: #fff;
+}
+ /*图右标题1*/
+.body .shop .main .tu-right .info-right .info-top li {  
+    float: left;
+    line-height: 20px;
+    width: 30px;
+
+    text-align: center;
+    margin: 0 11px;
+    border: 1px solid #F5F5F5;
+}
+.body .shop .main .tu-right .info-right .info-top li a{
+    display: block;
+    width:30px;
+    height:30px;
+    margin-top: 15px;
+}
+.body .shop .main .tu-right .info-right .info-top li:hover{
+    color:#f40;
+    cursor: pointer;
+}
+/*图右标题2*/
+.body .shop .main .tu-right .info-right .info-bottom li a{
+    float: left;
+    line-height: 20px;
+    width: 110px;
+    text-align: center;
+    margin: 5px 11px;
+}
+.body .shop .main .tu-right .info-right .info-bottom li .imp{
+    color:#f40;
+}
+/*话费栏-------------------------------------------------*/
+.body .shop .main .huafei{
+    position: relative;
+    width:274px;
+    height:335px;
+    /* border:1px solid red; */
+}
+.body .shop .main .huafei li{
+    float: left;
+    width:70px;
+}
+.body .shop .main .huafei li {
+    float: left;
+    width:66px;
+    height:60px;   
+    /* border:1px solid #f40; */
+    border-bottom-color:#fff;
+    text-align: center;
+    margin-top: 15px;
+    border: 1px solid #F4F4F4;
+}
+.body .shop .main .huafei li a{
+    display: inline-block;
+    width: 24px;
+    height: 33px;
+    margin-top: 11px;
+    background-repeat: no-repeat;
+}
+.body .shop .main .huafei li a p{
+    display: block;
+    width:70px;
+    height:24px;
+    color:#333;
+    margin-left:-22px;
+    margin-top: 30px;
+    line-height: 24px;
+    text-align: center;
+}
+/* 四张图片 */
+.body .shop .main .huafei li  .huafei{
+    background: url(huafei.png)0 0 no-repeat; 
+}
+.body .shop .main .huafei li  .lvxing{
+
+    background: url(huafei.png)0 0 no-repeat;
+}
+.body .shop .main .huafei li  .chexian{
+    background: url(chexian.png);
+}
+.body .shop .main .huafei li  .youxi{
+    background: url(youxi.png);
+}
