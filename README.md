@@ -1,7 +1,7 @@
 #记录自己觉得有意思、有意义的小 demo
 
-### 这里是我的leetcode的练习题，欢迎大家执政[传送门]
-(https://github.com/webbj97/leetCode-JavaScript-bj)
+### 这里是我的leetcode的练习题，欢迎大家执政
+[传送门](https://github.com/webbj97/leetCode-JavaScript-bj)
 
 > 这里基本上都是原生（HTML+JS+CSS）实现的
 
