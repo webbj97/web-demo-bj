@@ -2,13 +2,13 @@
 
 > 这里基本上都是原生（HTML+JS+CSS）实现的
 
-## 阉割版放大镜
+## 常见的效果
 
-[放大镜效果](https://webbj97.github.io/web-demo-bj/效果相关/放大镜/index.html)
+[放大镜效果](https://webbj97.github.io/web-demo-bj/effect/magnifier/index.html)
 
 ## 有意思的Canvas
 
-[时钟](https://webbj97.github.io/web-demo-bj/canvas-svg%E7%9B%B8%E5%85%B3/canvas%E7%94%BB%E6%97%B6%E9%92%9F/index.html)
+[时钟](https://webbj97.github.io/web-demo-bj/canvas-svg%E7%9B%B8%E5%85%B3/clock/index.html)
 
 ## 静态页面
 
