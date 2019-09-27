@@ -22,6 +22,8 @@
 
 [仿京东官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/京东官网/demo.html)  
 [仿淘宝官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/淘宝首屏/index.html)  
+[基于bootstrap的后台布局](https://webbj97.github.io/web-demo-bj/静态官网/bootstrap/index.html)  
+[基于bootstrap的介绍网页](https://webbj97.github.io/web-demo-bj/静态官网/浏览器介绍网页/demo.html)  
 
 ## 原生JS小游戏
 
