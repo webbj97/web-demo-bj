@@ -131,16 +131,7 @@
         }
         draw();
         setInterval(function(){
-            var now = new Date();
-            var hour = now.getHours();
-            var minute = now.getMinutes();
-            var second = now.getSeconds();
-            drawBackGrounf();//画一个表盘
-            drawHour(hour, minute);
-            drawMinutes(minute);
-            drawSecond(second);
-            drawYd();//画一个原点
-            ctx.restore();
+            draw();
         }, 1000);
 
 
