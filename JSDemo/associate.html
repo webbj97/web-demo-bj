@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        li:hover{
+            background: #ccc;
+        }
+        .wrapper {
+            position: absolute;
+            margin-left: -260px;
+            left: 50%;
+            top: 30%;
+        }
+        #btn {
+            width: 560px;
+            padding: 10px 10px;
+            border: 1px solid rgb(45, 129, 240);
+        }
+        #ul{
+            border: 1px solid #ddd;
+            border-top: 0;
+        }
+        a{
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            color: rgba(0,0,0,0.8) ;
+            outline: none;
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text " id="btn">
+        <ul id="ul">
+        </ul>
+    </div>
+
+    <script>
+        var input = document.getElementById('btn')
+        var oUl = document.getElementById('ul')
+        input.onkeyup = function () {
+            var value = this.value;
+            var oScript = document.createElement('script');
+            oScript.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + value + '&cb=aa'
+            document.body.appendChild(oScript)
+        }
+        function aa(data) {
+            oUl.style.display = 'block';
+            var list = data.s;
+            var str = '';
+            if (list.length > 0) {
+                list.forEach(function (ele, index) {
+                    str += '<li><a href ="https://www.baidu.com/s?wd=' + ele + '">' + ele + '</li>';
+                })
+                oUl.innerHTML = str;
+            } else {
+                oUl.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

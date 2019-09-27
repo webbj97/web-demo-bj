@@ -5,9 +5,10 @@
 
 > 这里基本上都是原生（HTML+JS+CSS）实现的
 
-## 常见的效果
+## 有趣的效果
 
 [放大镜效果](https://webbj97.github.io/web-demo-bj/effect/magnifier/index.html)  
+[百度搜索框](https://webbj97.github.io/web-demo-bj/JSDemo/associate.html)
 
 ## 常见的交互
 
