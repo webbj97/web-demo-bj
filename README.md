@@ -1,7 +1,10 @@
 #记录自己觉得有意思、有意义的小 demo
 
-### 这里是我的leetcode的练习题，欢迎大家执政
-[传送门](https://github.com/webbj97/leetCode-JavaScript-bj)
+个人信息：
+姜博健，花名：余光，厦门稿定设计前端开发工程师
+
+### 这里是我的leetcode的练习题，欢迎大家了解
+[LeetCode传送门](https://github.com/webbj97/leetCode-JavaScript-bj)
 
 > 这里基本上都是原生（HTML+JS+CSS）实现的
 
