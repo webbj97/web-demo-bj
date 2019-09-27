@@ -31,14 +31,14 @@
 .wrapper{
     width: 60%;
     height: 650px;
-    background-image: url('img/background.png');
+    /* background-image: url('img/background.png'); */
     background-size: 100% 100%;
     position:  relative;    
     left: 20%;
     /* border: 2px solid red; */
 }
 .lift-side{
-     widows: 20px;
+     width: 20px;
      height:660px;
      position: absolute;
      /* border-right: 10px solid black; */

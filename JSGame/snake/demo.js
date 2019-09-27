@@ -9,7 +9,6 @@ var startPage = document.getElementById('startPage');
 var close = document.getElementById('close');
 var lose = document.getElementById('lose');
 var content = document.getElementById('content');
-var startPage = document.getElementById('startPage');
 var speed = 300;
 var snakeMove;
 var loserScore = document.getElementById('loserScore');
@@ -181,9 +180,6 @@ function relodGame() {
     loserScore.innerHTML = this.score;
     this.score = 0; 
     scoreBox.innerHTML = this.score;
-    // startGameBool = true;
-    // startPaushBool = true;  
-    // startP.setAttribute('src', './img/start.png');
 }
 
 function removeClass(className) {
