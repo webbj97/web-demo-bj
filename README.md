@@ -14,3 +14,8 @@
 
 [仿京东官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/京东官网/demo.html)  
 [仿淘宝官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/淘宝首屏/index.html)  
+
+## 原生JS小游戏
+
+[贪吃蛇](https://webbj97.github.io/web-demo-bj/JSGame/snake/index.html)  
+[扫雷](https://webbj97.github.io/web-demo-bj/JSGame/landmine/index.html)
