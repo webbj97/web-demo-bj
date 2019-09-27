@@ -31,7 +31,7 @@
 .wrapper{
     width: 60%;
     height: 650px;
-    /* background-image: url('img/background.png'); */
+    background-image: url('img/background.png');
     background-size: 100% 100%;
     position:  relative;    
     left: 20%;
