@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .bg{
+        background: rgba(0,22,111,0.2);
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        margin-top: 50px;
+        margin-left: -350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <canvas id="myCanvas">
+        </canvas>
+        <button onclick="add()">我是一个按钮</button>
+    </div>
+    
+    <script>
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle="#FF0000";
+        
+        // ctx.fillRect(0,0,200,200);//矩形 (0,0)->(200,200)
+
+        // ctx.moveTo(0,0); //线条开始的坐标
+        // ctx.lineTo(200,100);//线条结束的坐标
+        // ctx.stroke();//绘制行程
+        var x= 0,y = 100
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, Math.PI*(2), false);
+        ctx.stroke();
+        function add(){
+            console.log(x,y,"xxxxx")
+            x++
+        }
+
+        
+    
+    </script>
+
+</body>
+</html>

@@ -13,4 +13,4 @@
 ## 静态页面
 
 [仿京东官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/京东官网/demo.html)  
-[仿淘宝官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/淘宝首屏/淘宝首屏.html)  
+[仿淘宝官网首屏预览](https://webbj97.github.io/web-demo-bj/静态官网/淘宝首屏/index.html)  

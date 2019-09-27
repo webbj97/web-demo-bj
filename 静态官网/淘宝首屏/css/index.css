@@ -1,0 +1,286 @@
+/* 导航栏 */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 13px;
+    color:#6C6C6C;
+    /* background: rgb(245, 238, 238) ; */
+}
+.tx{
+    color: #f40;
+}
+.web-shop{
+    width: 100%
+}
+/* 同步导航部分 */
+.top{
+    background-color:#F5F5F5;
+    height:35px;  
+    padding: 0 100px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top .nav {
+    display: flex;
+}
+.top .nav li{
+    padding: 0 12px;
+    display: flex;
+}
+.top .nav li a{
+    color:#6c6c6c;
+    font-size: 12px;
+    cursor: pointer; 
+}
+.top .nav li .icon-bottom{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin-top: 15px;
+    margin-left: 5px;
+    border-top: 4px solid #aaa;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+.top .nav .orange a{
+    color:#f40;
+}
+.top .nav a:hover{
+    color:#f40;
+    text-decoration: underline;
+}
+
+.body{
+    width: 1167px;
+    margin: 0 auto;
+}
+/*输入框部分 */
+.body .search{
+    height: 121px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body .search .search-logo{
+    width: 180px;
+    height: 100px;
+    background: url(./img/taobao.gif) center center;
+    cursor: pointer;
+}
+.body .search .search-box{
+    position: relative;
+    padding-right: 30px;
+}
+.body .search .search-box .search-tab{
+    display: flex;
+    position: absolute;
+    left: 20px;
+    background: #ff5400;
+}
+.body .search .search-box .search-tab a{
+    padding: 4px 10px;
+    display: inline-block;
+    color: #fff;
+
+}
+.body .search .search-box .search-input{
+    display: flex;
+    height: 33px;
+    padding-top: 26px
+}
+.body .search .search-box .search-input input{
+    height:33px;
+    width: 554px;
+    border: 3px solid #ff5400;   
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.body .search .search-box .search-input .btn{
+    height: 39px;
+    width: 56px;
+    border: 3px solid #ff5400;   
+    background: #ff5400;
+    color: #fff;
+    border-left: 0; 
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.body .search .search-box .search-choose{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+/* 导航栏 */
+.body .nav{
+    display: flex;
+    height: 30px;
+    background-color: #ff8700;
+    line-height: 30px;
+}
+.body .nav .li{
+    display: flex;
+    height: 30px;
+    padding: 0 15px;
+    color: #fff;
+}
+.body .nav .left-nav{
+    width: 190px;
+    text-align: center;
+    font-size: 16px;
+    background: #ff5000;
+    color: #fff;
+    line-height: 30px;
+}
+
+/* 列表框和图片区域 */
+.body .shop{
+    display: flex;
+    height: 500px;
+}
+.body .shop .left-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 190px;
+    height: 100%;
+    padding-top: 10px;
+    border: 1px solid #ff5000;
+    border-top: 0;
+    box-sizing: border-box;
+}
+.body .shop .left-items li{
+    text-align: center;
+    padding: 8px 15px;
+}
+/* 图片区域--------------------------------------------------- */
+.body .shop .img-box{
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.body .shop .img-box .tu1{
+    width: 520px;
+    height: 280px;
+    background-image: url(tu1.jpg);
+}
+.body .shop .img-box .tu2{
+    width: 160px;
+    height: 280px;
+    background-image: url(tu2.jpg);
+}
+.body .shop .img-box .tu3{
+    margin-top: 20px;
+    width: 520px;
+    height: 201px;
+    background-image: url(tu3.jpg);
+}
+.body .shop .img-box .tu4{
+    margin-top: 20px;
+    margin-left: 10px;
+    width:160px;
+    height:200px;
+    background-image: url(tu4.jpg);
+}
+/* 右区域 */
+.body .shop .tu-right{ 
+    width: 275px;
+    height: 495px;
+    background-color: #fff;
+    border: 1px solid #ff5000;
+    border-top: 0;
+}
+.body .shop .tu-right .icon-box{
+    height: 97px;
+    width: 100%;
+    text-align: center;
+}
+.body .shop .tu-right .right-icon img{
+    width:274px;
+    height:91px;
+}
+.body .shop .tu-right .right-btn{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.body .shop .tu-right .right-btn a{
+    display: inline-block;
+    width: 75px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFF;
+    background-color: #ff5000;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.body .shop .tu-right .right-warn{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #ffe4dd;
+}
+.body .shop .tu-right .right-info .info-top{
+    display: flex;
+    justify-content: space-around;
+}
+.body .shop .tu-right .right-info .info-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.body .shop .tu-right .right-info .info-bottom li{
+    font-size: 12px;
+}
+.body .shop .tu-right .right-rechage{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.body .shop .tu-right .right-rechage li{
+    display: inline-block;
+    width: 68.6px;
+    padding: 3px;
+    border: 1px solid #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.body .shop .tu-right .right-rechage li .icon{
+    display: inline-block;
+    height: 36px;
+    width: 40px;
+}
+.body .shop .tu-right .right-rechage li .icon-1{
+    background: url(./img/huafei.png) 50% 0 no-repeat; 
+}
+.body .shop .tu-right .right-rechage li .icon-2{
+    background: url(./img/huafei.png) 50% -43px no-repeat; 
+}
+.body .shop .tu-right .right-rechage li .icon-3{
+    background: url(./img/huafei.png) 50% -86px no-repeat; 
+}
+.body .shop .tu-right .right-rechage li .icon-4{
+    background: url(./img/huafei.png) 50% -129px no-repeat; 
+}
+
+
