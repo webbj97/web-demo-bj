@@ -169,29 +169,6 @@
     padding-left: 10px;
     box-sizing: border-box;
 }
-.body .shop .img-box .tu1{
-    width: 520px;
-    height: 280px;
-    background-image: url(tu1.jpg);
-}
-.body .shop .img-box .tu2{
-    width: 160px;
-    height: 280px;
-    background-image: url(tu2.jpg);
-}
-.body .shop .img-box .tu3{
-    margin-top: 20px;
-    width: 520px;
-    height: 201px;
-    background-image: url(tu3.jpg);
-}
-.body .shop .img-box .tu4{
-    margin-top: 20px;
-    margin-left: 10px;
-    width:160px;
-    height:200px;
-    background-image: url(tu4.jpg);
-}
 /* 右区域 */
 .body .shop .tu-right{ 
     width: 275px;
@@ -271,16 +248,16 @@
     width: 40px;
 }
 .body .shop .tu-right .right-rechage li .icon-1{
-    background: url(./img/huafei.png) 50% 0 no-repeat; 
+    background: url(../img/huafei.png) 50% 0 no-repeat; 
 }
 .body .shop .tu-right .right-rechage li .icon-2{
-    background: url(./img/huafei.png) 50% -43px no-repeat; 
+    background: url(../img/huafei.png) 50% -43px no-repeat; 
 }
 .body .shop .tu-right .right-rechage li .icon-3{
-    background: url(./img/huafei.png) 50% -86px no-repeat; 
+    background: url(../img/huafei.png) 50% -86px no-repeat; 
 }
 .body .shop .tu-right .right-rechage li .icon-4{
-    background: url(./img/huafei.png) 50% -129px no-repeat; 
+    background: url(../img/huafei.png) 50% -129px no-repeat; 
 }
 
 
