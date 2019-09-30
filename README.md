@@ -2,6 +2,8 @@
 
 个人信息：
 姜博健，花名：余光，厦门稿定设计前端开发工程师
+---
+19-09-22日开始维护
 
 ### 这里是我的leetcode的练习题，欢迎大家了解
 [LeetCode传送门](https://github.com/webbj97/leetCode-JavaScript-bj)
@@ -11,8 +13,8 @@
 ## 有趣的效果
 
 [放大镜效果](https://webbj97.github.io/web-demo-bj/effect/magnifier/index.html)  
-[百度自动关联搜索框](https://webbj97.github.io/web-demo-bj/JSDemo/associate.html)
-[无止境的楼梯](https://webbj97.github.io/web-demo-bj/CSS/staris/index.html)
+[百度自动关联搜索框](https://webbj97.github.io/web-demo-bj/JSDemo/associate.html)  
+[无止境的楼梯](https://webbj97.github.io/web-demo-bj/CSS/staris/index.html)  
 
 ## 常见的交互
 
