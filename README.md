@@ -11,7 +11,8 @@
 ## 有趣的效果
 
 [放大镜效果](https://webbj97.github.io/web-demo-bj/effect/magnifier/index.html)  
-[百度搜索框](https://webbj97.github.io/web-demo-bj/JSDemo/associate.html)
+[百度自动关联搜索框](https://webbj97.github.io/web-demo-bj/JSDemo/associate.html)
+[无止境的楼梯](https://webbj97.github.io/web-demo-bj/CSS/staris/index.html)
 
 ## 常见的交互
 
