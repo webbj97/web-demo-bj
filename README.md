@@ -19,6 +19,8 @@
 ## 常见的交互
 
 [小米官网同款轮播图](https://webbj97.github.io/web-demo-bj/slider/slider-mi/demo.html)
+[二级折叠菜单](https://webbj97.github.io/web-demo-bj/dom/折叠菜单.html)
+[常见的拖动效果](https://webbj97.github.io/web-demo-bj/dom/拖动.html)
 
 ## 有意思的Canvas
 

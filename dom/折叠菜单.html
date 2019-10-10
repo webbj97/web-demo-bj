@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
   <style>
-    *{
-      margin:0;
-      padding:0;
+    * {
+      margin: 0;
+      padding: 0;
     }
-    ul{
+    ul {
       list-style-type: none;
     }
-    .box{
+    .box {
       width: 300px;
-      margin:200px auto;
+      margin: 200px auto;
       text-align: center;
       cursor: pointer;
-      border:1px solid #000000;
+      border: 1px solid #000000;
     }
-    ul li li:hover{
+    ul li li:hover {
       background-color: #dddddd;
     }
-    ul li p{
-      padding:5px 0;
+    ul li p {
+      padding: 5px 0;
       background-color: #000000;
       color: #ffffff;
     }
@@ -31,77 +32,78 @@
     }
   </style>
 </head>
+
 <body>
-<div class="box">
-  <ul>
-    <li>
-      <p>第一节课</p>
-      <ul class="toggle-bar">
-        <li>第一课内容1</li>
-        <li>第一课内容2</li>
-        <li>第一课内容3</li>
-      </ul>
-    </li>
-    <li>
-      <p>第二节课</p>
-      <ul class="toggle-bar">
-        <li>第二课内容1</li>
-        <li>第二课内容2</li>
-        <li>第二课内容3</li>
-      </ul>
-    </li>
-    <li>
-      <p>第三节课</p>
-      <ul class="toggle-bar">
-        <li>第三课内容1</li>
-        <li>第三课内容2</li>
-        <li>第三课内容3</li>
-      </ul>
-    </li>
-    <li>
-      <p>第四节课</p>
-      <ul class="toggle-bar">
-        <li>第四课内容1</li>
-        <li>第四课内容2</li>
-        <li>第四课内容3</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-<script>
-  var aBtn = document.getElementsByTagName("p");
-  var aToggle = document.getElementsByClassName("toggle-bar");
-  
-  for(var i= 0;i<aBtn.length;i++){
+  <div class="box">
+    <ul>
+      <li>
+        <p>第一节课</p>
+        <ul class="toggle-bar">
+          <li>第一课内容1</li>
+          <li>第一课内容2</li>
+          <li>第一课内容3</li>
+        </ul>
+      </li>
+      <li>
+        <p>第二节课</p>
+        <ul class="toggle-bar">
+          <li>第二课内容1</li>
+          <li>第二课内容2</li>
+          <li>第二课内容3</li>
+        </ul>
+      </li>
+      <li>
+        <p>第三节课</p>
+        <ul class="toggle-bar">
+          <li>第三课内容1</li>
+          <li>第三课内容2</li>
+          <li>第三课内容3</li>
+        </ul>
+      </li>
+      <li>
+        <p>第四节课</p>
+        <ul class="toggle-bar">
+          <li>第四课内容1</li>
+          <li>第四课内容2</li>
+          <li>第四课内容3</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script>
+    var aBtn = document.getElementsByTagName("p");
+    var aToggle = document.getElementsByClassName("toggle-bar");
+
+    for (var i = 0; i < aBtn.length; i++) {
       aBtn[i].index = i;
       aBtn[i].isClick = -1;
       aBtn[i].onclick = function () {
 
-          var thisSibling = next(this);
-          for(var j=0;j<aBtn.length ;j++){
-              if(this.index != j){
-                  aToggle[j].style.display = "none";
-                  aBtn[j].isClick = -1;
-              }
+        var thisSibling = next(this);
+        for (var j = 0; j < aBtn.length; j++) {
+          if (this.index != j) {
+            aToggle[j].style.display = "none";
+            aBtn[j].isClick = -1;
           }
-          console.log(this.isClick);
-          if(this.isClick == -1){
-              thisSibling.style.display = "block";
-          }else{
-              thisSibling.style.display = "none";
-          }
-          this.isClick *= -1;
+        }
+        console.log(this.isClick);
+        if (this.isClick == -1) {
+          thisSibling.style.display = "block";
+        } else {
+          thisSibling.style.display = "none";
+        }
+        this.isClick *= -1;
       }
-  }
+    }
 
-
-  function next(obj) {
+    function next(obj) {
       var nextNode = obj;
-      do{
-          nextNode = nextNode.nextSibling;
-      }while ( nextNode && nextNode.nodeType!=1);
+      do {
+        nextNode = nextNode.nextSibling;
+      } while (nextNode && nextNode.nodeType != 1);
       return nextNode;
-  }
-</script>
+    }
+  </script>
 </body>
+
 </html>
