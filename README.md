@@ -15,6 +15,8 @@
 [放大镜效果](https://webbj97.github.io/web-demo-bj/effect/magnifier/index.html)  
 [百度自动关联搜索框](https://webbj97.github.io/web-demo-bj/JSDemo/associate.html)  
 [无止境的楼梯](https://webbj97.github.io/web-demo-bj/CSS/stairs/index.html)  
+[Canvas时钟](https://webbj97.github.io/web-demo-bj/canvas-svg%E7%9B%B8%E5%85%B3/clock/index.html)  
+
 
 ## 常见的交互
 
@@ -22,9 +24,6 @@
 [二级折叠菜单](https://webbj97.github.io/web-demo-bj/dom/折叠菜单.html)  
 [常见的拖动效果](https://webbj97.github.io/web-demo-bj/dom/拖动.html)  
 
-## 有意思的Canvas
-
-[Canvas时钟](https://webbj97.github.io/web-demo-bj/canvas-svg%E7%9B%B8%E5%85%B3/clock/index.html)  
 
 ## 静态页面
 
