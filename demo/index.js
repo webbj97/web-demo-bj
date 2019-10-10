@@ -1,43 +1,32 @@
-// ObjServer.prototype.walk = function (data) {
-//     Object.keys(data).forEach(key => {
-//         console.log(key)
-//     })
-// }
-// ObjServer.prototype.test = '1'
+// promise
 
-// function ObjServer (data){
-//     this.data = data
-//     console.log(this,'this')
-//     this.walk(data)
+// function timeout(ms) {
+//     return new Promise((resolve, reject) => {
+//         console.log('1')
+//         resolve()
+//         // setTimeout(resolve, ms);
+//         console.log('3')
+//     });
 // }
 
-// let obj = {
-//     name: 'yuguahng',
-//     age: '123'
-// }
+// timeout(100).then(() => {
+//     console.log('2');
+// }).catch(()=>{
+//     console.log('error')
+// });
 
-// var aa = new ObjServer(obj)
-// console.log(aa.walk(obj))
-// ObjServer(obj)
-Observer.prototype = {
-    walk: function (data) {
-        let self = this;
-        Object.keys(data).forEach((key) => {
-            console.log(this)
-            // console.log(key);
-        })
-    }
-}
+// console.log('4')
 
-let obj = {
-    name: '12',
-    age: '23'
-}
-function Observer(data) {
-    this.data = data;
-    console.log(this)
-    console.log(this.walk)
-    // this.walk(data);
-}
-Observer(obj)
+const p1 = new Promise(function(resolve, reject) {
+    setTimeout(() => {
+        reject('余光测试')
+    }, 3000);
+})
 
+const p2 = new Promise(function(resolve, reject) {
+    setTimeout(() => {
+        resolve(p1)
+    }, 1000);
+})
+
+p2.then(res => console.log(res+'1')).catch((err) => console.log(err))
