@@ -1,0 +1,150 @@
+#app{
+    min-width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* 头部 */
+.main-header{
+    position: relative;
+    z-index: 30;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: #333;
+}
+.main-header .main-nav{
+    width: 1226px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.main-nav .list,.login{
+    display: flex;
+}
+.main-nav .list .item{
+    color: #b0b0b0;
+    margin-right: 15px;
+}
+.main-nav .login .item{
+    color: #b0b0b0;
+    margin-left: 15px;
+}
+/* 主内容 */
+.main-body{
+    width: 100%;
+}
+/* 盒子一 */
+.container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1226px;
+    margin: 0 auto;
+    height: 100px;
+}
+.container-1 img{
+    display: block;
+    width: 52px;
+    height: 52px;
+}
+.container-1 .nav-list .item{
+    color: #333;
+    font-size: 16px;
+    transition: color .3s ease-in-out;
+    margin-right: 15px;
+}
+.container-1 .nav-list .item:hover{
+    color: #f40;
+}
+.container-1 input{
+    width: 223px;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    text-align: right;
+    padding: 10px;
+}
+
+/* 盒子二 */
+.container-2{
+    position: relative;
+    width: 1226px;
+    margin: 0 auto;
+}
+.container-2 .left-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    height: 460px;
+    border: 0;
+    color: #fff;
+    background: rgba(105,101,101,.6);
+}
+.container-2 .left-nav .item{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    width: 230px;
+    color: #fff;
+    font-weight: 350;
+}
+.container-2 .left-nav .hid-content{
+    position: absolute;
+    top: 0;
+    left: 230px;
+    width: 400px;
+    height: 100%;
+    border: 2px solid blue;
+    padding: 30px;
+    display: none;
+}
+.container-2 .left-nav .item:hover{
+    background: #ff6700;
+}
+.container-2 .slider-box img{
+    display: block;
+    width: 1226px;
+    height: 460px
+}
+
+/* 盒子三 */
+.container-3{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0;
+    width: 1226px;
+}
+.container-3 .nav-list{
+    width: 234px;
+    height: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #5f5750;
+}
+.container-3 .nav-list .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 78px;
+    height: 85px;
+}
+.container-3 .nav-list .item .icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+}
+.container-3 .img-con-3{
+    width: 316px;
+    height: 170px;
+}
+
