@@ -119,6 +119,7 @@
     justify-content: space-between;
     margin: 20px auto 0;
     width: 1226px;
+    padding-bottom: 20px;
 }
 .container-3 .nav-list{
     width: 234px;
@@ -148,3 +149,79 @@
     height: 170px;
 }
 
+/* 盒子四 */
+.container-4{
+    width: 100%;
+    background: #f5f5f5;
+}
+.container-4 .box{
+    width: 1226px;
+    margin: 0 auto;
+}
+.container-4 .box .title{
+    font-size: 22px;
+    line-height: 58px;
+}
+.container-4 .box .content{
+    display: flex;
+    justify-content: space-between;
+}
+.container-4 .box .content .item{
+    width: 234px;
+    height: 399px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-4 .box .content .item .img{
+    width: 200px;
+    height: 200px;
+}
+.container-4 .box .content .item .name{
+    font-size: 16px;
+    color: #000;
+}
+.container-4 .box .content .item .desc{
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+.container-4 .box .content .item .price{
+    margin-top: 15px;
+}
+.container-4 .box .content .item-1{
+    background: #e9dada;
+    border-top: 1px solid red;
+}
+.container-4 .box .content .item-2,.item-3,.item-4,.item-5{
+    background: #fff;
+}
+.container-4 .box .content .item-2{
+    border-top: 1px solid red;
+}
+.container-4 .box .content .item-2 .img{
+    background: url('../img/con-4-1.jpg') center no-repeat;
+    background-size: 200px 200px;
+}
+.container-4 .box .content .item-3{
+    border-top: 1px solid green;
+}
+.container-4 .box .content .item-3 .img{
+    background: url('../img/con-4-2.jpg') center no-repeat;
+    background-size: 200px 200px;
+}
+.container-4 .box .content .item-4{
+    border-top: 1px solid orange;
+}
+.container-4 .box .content .item-4 .img{
+    background: url('../img/con-4-3.jpg') center no-repeat;
+    background-size: 200px 200px;
+}
+.container-4 .box .content .item-5{
+    border-top: 1px solid blue;
+}
+.container-4 .box .content .item-5 .img{
+    background: url('../img/con-4-4.jpg') center no-repeat;
+    background-size: 200px 200px;
+}
