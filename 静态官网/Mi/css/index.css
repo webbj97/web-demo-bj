@@ -3,6 +3,9 @@
     margin-right: auto;
     margin-left: auto;
 }
+img{
+    display: block;
+}
 /* 头部 */
 .main-header{
     position: relative;
@@ -190,38 +193,140 @@
 .container-4 .box .content .item .price{
     margin-top: 15px;
 }
-.container-4 .box .content .item-1{
-    background: #e9dada;
-    border-top: 1px solid red;
+.container-4 .box .content .item .price .price-now{
+    color: #f40;
 }
-.container-4 .box .content .item-2,.item-3,.item-4,.item-5{
+.container-4 .box .content .item .price .price-last{
+    color: #CCC;
+    text-decoration: line-through;
+    margin-left: 2px;
+}
+.container-4 .box .content .item .img{
+    background: url('../img/con-4-1.jpg') center no-repeat;
+    background-size: 200px 200px;
+}
+.container-4 .box .content .item{
     background: #fff;
+}
+.container-4 .box .content .item-1{
+    border-top: 1px solid palevioletred;
 }
 .container-4 .box .content .item-2{
     border-top: 1px solid red;
 }
-.container-4 .box .content .item-2 .img{
-    background: url('../img/con-4-1.jpg') center no-repeat;
-    background-size: 200px 200px;
-}
 .container-4 .box .content .item-3{
     border-top: 1px solid green;
-}
-.container-4 .box .content .item-3 .img{
-    background: url('../img/con-4-2.jpg') center no-repeat;
-    background-size: 200px 200px;
 }
 .container-4 .box .content .item-4{
     border-top: 1px solid orange;
 }
-.container-4 .box .content .item-4 .img{
-    background: url('../img/con-4-3.jpg') center no-repeat;
+.container-4 .box .content .item-5{
+    border-top: 1px solid blue;
+}
+
+/* 盒子五 */
+.container-5{
+    background: #f5f5f5;
+    padding: 16px 0;
+}
+.container-5 img{
+    width: 1226px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+/* 盒子六 */
+.container-6{
+    background: #f5f5f5;
+}
+.container-6 .box{
+    width: 1226px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.container-6 .box .title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 58px;
+}
+.container-6 .box .content{
+    display: flex;
+    justify-content: space-between;
+}
+.container-6 .box .content .phone-img{
+    width: 234px;
+    height: 634px;
+}
+.container-6 .box .content .phone-box{
+    width: 978px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container-6 .box .content .phone-box .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 234px;
+    height: 300px;
+    background: #fff;
+    padding: 20px 0;
+}
+.container-6 .box .content .phone-box .item img{
+    width: 160px;
+    height: 160px;
+}
+.container-4 .box .content .item .name{
+    font-size: 16px;
+    color: #000;
+}
+.container-4 .box .content .item .desc{
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+.container-4 .box .content .item .price{
+    margin-top: 15px;
+}
+.container-4 .box .content .item .price .price-now{
+    color: #f40;
+}
+.container-4 .box .content .item .price .price-last{
+    color: #CCC;
+    text-decoration: line-through;
+    margin-left: 2px;
+}
+.container-4 .box .content .item .img{
+    background: url('../img/con-4-1.jpg') center no-repeat;
     background-size: 200px 200px;
+}
+.container-4 .box .content .item{
+    background: #fff;
+}
+.container-4 .box .content .item-1{
+    border-top: 1px solid palevioletred;
+}
+.container-4 .box .content .item-2{
+    border-top: 1px solid red;
+}
+.container-4 .box .content .item-3{
+    border-top: 1px solid green;
+}
+.container-4 .box .content .item-4{
+    border-top: 1px solid orange;
 }
 .container-4 .box .content .item-5{
     border-top: 1px solid blue;
 }
-.container-4 .box .content .item-5 .img{
-    background: url('../img/con-4-4.jpg') center no-repeat;
-    background-size: 200px 200px;
+
+/* 盒子七 */
+.container-7{
+    background: #f5f5f5;
+    padding: 16px 0;
+}
+.container-7 img{
+    width: 1226px;
+    height: 120px;
+    margin: 0 auto;
 }
