@@ -380,3 +380,22 @@ img{
     height: auto;
     margin: 0 auto;
 }
+
+.fix-tool{
+    position: fixed;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 300px;
+    background: #fff;
+    left: 50%;
+    margin-left: 613px;
+    border: 1px solid #ccc;
+}
+.fix-tool a{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
