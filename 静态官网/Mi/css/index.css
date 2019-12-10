@@ -322,6 +322,11 @@ img{
 .main-footer .container .nav .item{
     width: 243px;
     text-align: center;
+    transition: color .28s;
+}
+.main-footer .container .nav .item:hover{
+    color: #f40;
+    cursor: pointer;
 }
 .main-footer .container .nav .item:not(:last-child){
     border-right: 1px solid #ccc;
