@@ -33,6 +33,9 @@ img{
     color: #b0b0b0;
     margin-right: 15px;
 }
+.main-nav .list .item:hover{
+    color: #fff;
+}
 .main-nav .login .item{
     color: #b0b0b0;
     margin-left: 15px;
@@ -43,6 +46,7 @@ img{
 }
 /* 盒子一 */
 .container-1{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +59,21 @@ img{
     width: 52px;
     height: 52px;
 }
+.container-1 .hid-content{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid red;
+    background: red;
+    transition: height .28s;
+}
+.container-1 .hid-content .item{
+    background: url('../img/');
+}
 .container-1 .nav-list .item{
     color: #333;
     font-size: 16px;
@@ -63,6 +82,9 @@ img{
 }
 .container-1 .nav-list .item:hover{
     color: #f40;
+}
+.container-1:hover  .hid-content{
+    height: 200px;    
 }
 .container-1 input{
     width: 223px;
