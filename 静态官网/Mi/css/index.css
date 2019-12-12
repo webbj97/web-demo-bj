@@ -66,13 +66,22 @@ img{
     z-index: 1;
     width: 100%;
     height: 0;
+    background: #fff;
     overflow: hidden;
-    border: 1px solid red;
-    background: red;
     transition: height .28s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .container-1 .hid-content .item{
-    background: url('../img/');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-1 .hid-content .item img{
+    width: 160px;
+    height: 110px;
+    border-right: 1px solid #ddd;
 }
 .container-1 .nav-list .item{
     color: #333;
@@ -84,7 +93,9 @@ img{
     color: #f40;
 }
 .container-1:hover  .hid-content{
-    height: 200px;    
+    height: 200px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);    
 }
 .container-1 input{
     width: 223px;
@@ -112,6 +123,9 @@ img{
     color: #fff;
     background: rgba(105,101,101,.6);
 }
+.container-2 .left-nav:hover .hid-content{
+    display: block;
+}
 .container-2 .left-nav .item{
     position: relative;
     display: block;
@@ -128,8 +142,9 @@ img{
     left: 230px;
     width: 400px;
     height: 100%;
-    border: 2px solid blue;
+    border: 1px solid #ccc;
     padding: 30px;
+    background: #fff;
     display: none;
 }
 .container-2 .left-nav .item:hover{
@@ -165,6 +180,11 @@ img{
     justify-content: center;
     width: 78px;
     height: 85px;
+    transition: all .28s;
+}
+.container-3 .nav-list .item:hover{
+    cursor: pointer;
+    opacity: 0.5;
 }
 .container-3 .nav-list .item .icon{
     display: block;
