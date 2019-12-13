@@ -491,7 +491,7 @@ img{
 
 .fix-tool{
     position: fixed;
-    top: 60%;
+    top: 55%;
     display: flex;
     flex-direction: column;
     width: 60px;
@@ -506,4 +506,7 @@ img{
     height: 60px;
     text-align: center;
     line-height: 60px;
+}
+.fix-tool a:hover{
+    background: rgba(0,0,0,0.2);
 }
