@@ -7,48 +7,54 @@
     <title>Document</title>
     <style>
     .bg{
-        background: rgba(0,22,111,0.2);
-        width: 700px;
-        height: 400px;
-        margin: 0 auto;
-        position: relative;
-        left: 50%;
-        margin-top: 50px;
-        margin-left: -350px;
+        width: 100%;
+        height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    canvas{
+        background-image: linear-gradient(20deg, #FF1C26, #fff);
+        transform: rotate(0deg);
+        flex-grow: 1;
+        /* animation: roto 20s linear infinite; */
+    }
+    @keyframes roto {
+        to{
+            transform: rotate(360deg);
+        }
     }
     </style>
 </head>
 <body>
     <div class="bg">
-        <canvas id="myCanvas">
-        </canvas>
-        <button onclick="add()">我是一个按钮</button>
+        <canvas id="app"></canvas>
+        <canvas id="app"></canvas>
     </div>
     
     <script>
-        var c=document.getElementById("myCanvas");
-        var ctx=c.getContext("2d");
-        ctx.fillStyle="#FF0000";
-        
-        // ctx.fillRect(0,0,200,200);//矩形 (0,0)->(200,200)
+        // var canvas = document.getElementById('app');
+        // console.log('canvas:', canvas);
+        // var ctx = canvas.getContext('2d');
+        // console.log('ctx:', ctx);
+        // // ctx.fillstyle = 'rgb(200,0,0)'
+        // // ctx.fillRect (10, 10, 55, 50);
 
-        // ctx.moveTo(0,0); //线条开始的坐标
-        // ctx.lineTo(200,100);//线条结束的坐标
-        // ctx.stroke();//绘制行程
-        var x= 0,y = 100
-        ctx.beginPath();
-        ctx.arc(100, 100, 50, 0, Math.PI*(2), false);
-        ctx.stroke();
-        function add(){
-            console.log(x,y,"xxxxx")
-            x++
-        }
+        // // ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        // // ctx.fillRect (30, 30, 55, 50);
 
-        
-    
+        // // ctx.fillStyle = "rgba(0, 200, 0, 0.5)";
+        // // ctx.fillRect (50, 50, 55, 50);
+
+        // function draw(){
+        //     ctx.fillRect(0,110,100,100) // 绘制一个填充的矩形
+        //     ctx.strokeRect(0,0,100,100) // 绘制一个矩形的边框
+        //     ctx.fillRect(110,0,100,100)
+        //     ctx.strokeRect(110,110,100,100)
+        //     ctx.clearRect(120, 10, 50, 25);
+        // }
+        // draw()
     </script>
 
 </body>

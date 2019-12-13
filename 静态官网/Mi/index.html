@@ -106,12 +106,18 @@
                         
                     </div>
                 </ul>
-                <div class="slider-box">
-                    <img src="./img/1.jpg">
-                    <!-- <img src="./img/2.jpg" > -->
-                    <!-- <img src="./img/3.jpg" > -->
-                    <!-- <img src="./img/4.jpg" > -->
-                    <!-- <img src="./img/5.jpg" > -->
+                <div id="slider-box" class="slider-box slider-box-1">
+                    <div class="switch">
+                        <span class="btn" id="per" onclick="pre()">左</span>
+                        <span class="btn" id="next" onclick="next()">右</span>
+                    </div>
+                    <ul class="nav">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
             <!-- 盒子三  -->
@@ -319,6 +325,8 @@
         </div>
         <img class="footer-img" src="./img/footer.png" alt="">
     </div>
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
