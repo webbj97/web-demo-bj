@@ -1,10 +1,10 @@
-var obj = {
-    name: 'aaa',
-    height: 187,
-    width: 100
+const inp = [
+    ['foo', 'bar'],
+    ['baz', 42]
+];
+var obj = {}
+for(key of inp){
+    obj[key[0]] = key[1]
 }
-for(let key in obj){
-    console.log('key:', key);
-}
-
+console.log('obj:', obj);
 

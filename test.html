@@ -12,41 +12,44 @@
 </head>
 
 <body>
-    <div style="width: 1000px; line-height: 0; font-size: 0px; background-color: rgb(242, 243, 247);">
-        <img alt="" src="//img.alicdn.com/imgextra/i2/45632667/O1CN01TNND1c1VZWsvrsTgU_!!45632667.jpg"
-            style="width: 1000px; height: auto;" />
-        <a href="//fuwu.taobao.com/ser/confirmOrder1.htm?commonParams=activityCode%3AACT_45632667_190821113546%3BagentId%3Afuwu.taobao.com%7Cmarketing-Order-0%3BmarketKey%3AFWSPP_MARKETING_URL%3BpromIds%3A%5B1004532662%5D&amp;subParams=cycleNum%3A1%2CcycleUnit%3A2%2CitemCode%3Aappstore-10687-3&amp;sign=CEC051FF6E611B6E66ADC96F691C8DEC"
-            target="_blank">
-            <img src="https://img.alicdn.com/imgextra/i1/45632667/O1CN01LVvjG81VZWt2SaV1X_!!45632667.png"
-                style="width: 500px;height: auto;" alt="">
-        </a>
-        <a href="//amos.alicdn.com/getcid.aw?v=2&uid=%E6%AC%A2%E4%B9%90%E9%80%9B&site=cntaobao&s=1&groupid=0&charset=utf-8"
-            target="_blank">
-            <img src="https://img.alicdn.com/imgextra/i1/45632667/O1CN01LVvjG81VZWt2SaV1X_!!45632667.png"
-                style="width: 500px;height: auto;" alt="">
-        </a>
-        <img alt="" src="//hlgcdn.oss-cn-hangzhou.aliyuncs.com/hlg-ui/1566357486878/37784811.gif"
-            style="width: 1000px; height: auto; margin-top: 30px;" />
-        <img alt="" src="//img.alicdn.com/imgextra/i4/45632667/O1CN01N8T6gZ1VZWsu6kmh2_!!45632667.jpg"
-            style="width: 1000px; height: auto;" />
-        <a href="//fuwu.taobao.com/ser/confirmOrder1.htm?commonParams=activityCode%3AACT_45632667_190821113546%3BagentId%3Afuwu.taobao.com%7Cmarketing-Order-0%3BmarketKey%3AFWSPP_MARKETING_URL%3BpromIds%3A%5B1004532662%5D&amp;subParams=cycleNum%3A1%2CcycleUnit%3A2%2CitemCode%3Aappstore-10687-3&amp;sign=CEC051FF6E611B6E66ADC96F691C8DEC"
-            target="_blank">
-            <img alt="" src="//img.alicdn.com/imgextra/i4/45632667/O1CN01zb0PLG1VZWsyB4yFF_!!45632667.png"
-                style="width: 186px; height: auto; margin-left: 251px;" />
-        </a>
-        <a href="//fuwu.taobao.com/ser/confirmOrder1.htm?commonParams=activityCode%3AACT_45632667_190821113546%3BagentId%3Afuwu.taobao.com%7Cmarketing-Order-0%3BmarketKey%3AFWSPP_MARKETING_URL%3BpromIds%3A%5B1004532663%5D&amp;subParams=cycleNum%3A12%2CcycleUnit%3A2%2CitemCode%3Aappstore-10687-v13&amp;sign=6D835720D0457BF6442F50D8A1A36552"
-            target="_blank">
-            <img alt="" src="//hlgcdn.oss-cn-hangzhou.aliyuncs.com/hlg-ui/1566460271895/41439961.png"
-                style="width: 206px; height: auto; margin-bottom: -14px;" />
-        </a>
-        <a href="//fuwu.taobao.com/ser/confirmOrder1.htm?commonParams=activityCode%3AACT_45632667_190821113546%3BagentId%3Afuwu.taobao.com%7Cmarketing-Order-0%3BmarketKey%3AFWSPP_MARKETING_URL%3BpromIds%3A%5B1004532663%5D&amp;subParams=cycleNum%3A1%2CcycleUnit%3A2%2CitemCode%3Aappstore-10687-v13&amp;sign=9A4876F6FA60F94CD5C120CDA8C173FD"
-            target="_blank">
-            <img alt="" src="//hlgcdn.oss-cn-hangzhou.aliyuncs.com/hlg-ui/1566460283978/45555100.png"
-                style="width: 186px; height: auto;" />
-        </a>
-        <img alt="" src="//hlgcdn.oss-cn-hangzhou.aliyuncs.com/hlg-ui/1566460253776/77364504.png"
-            style="width: 1000px; height: auto;" />
-    </div>
+    <script>
+        (()=>{
+            let ratio = 0;
+            const { screen } = window;
+            const ua = navigator.userAgent.toLowerCase();
+            console.log('screen:', screen);
+            console.log('------');
+            
+            console.log('ua:', ua);
+            
+            
+            if (window.devicePixelRatio !== undefined) {
+                ratio = window.devicePixelRatio;
+                console.log('进入了11:',ratio);
+                console.log('该 Window 属性 devicePixelRatio 能够返回当前显示设备的物理像素分辨率与 CSS 像素分辨率的比率。此值也可以解释为像素大小的比率：一个 CSS 像素的大小与一个物理像素的大小的比值。简单地说，这告诉浏览器应该使用多少个屏幕的实际像素来绘制单个 CSS 像素。无法通知该值。由于没有可用于检测像素密度变化的回调或事件，因此唯一的方法是定期检查其 devicePixelRatio 值是否已更改。不要经常这样做，否则会影响性能。:',window.devicePixelRatio);
+            } else if (~ua.indexOf('msie')) {
+                // deviceXDPI 属性返回显示屏幕的每英寸水平点数。
+                // logicalXDPI 属性可返回显示屏幕每英寸的水平方向的常规点数。
+                if (screen.deviceXDPI && screen.logicalXDPI) {
+                    console.log('每英寸点数:',screen.deviceXDPI,'常规点数',screen.logicalXDPI);
+                    ratio = screen.deviceXDPI / screen.logicalXDPI;
+                    console.log('进入了2222:',ratio);
+                }
+            } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+                // outerwidth 属性是一个只读的整数，声明了整个窗口的宽度。
+                // 只读属性，声明了窗口的文档显示区的高度和宽度，以像素计。这里的宽度和高度不包括菜单栏、工具栏以及滚动条等的高度。
+                ratio = window.outerWidth / window.innerWidth;
+                console.log('进入了33:',ratio);
+            }
+            if (ratio) {
+                ratio = Math.round(ratio * 100);
+            }
+            console.log('radio:', ratio);
+            if (ratio !== 100 && ratio !== 200) {
+                console.log('radio:', ratio);
+            }
+        })()
+    </script>
 </body>
 
 </html>
