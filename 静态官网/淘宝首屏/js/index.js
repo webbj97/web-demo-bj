@@ -15,17 +15,16 @@ var oNavContentData = [
     { title: '标题14', list1: [1, 2, 3, 4, 5], list2: [1, 2, 3, 4, 5], list3: [1, 2, 3, 4, 5] },
 ]
 var oNavItemBox = document.getElementById('left-items');
-var oNavItemLi = document.querySelectorAll('.left-items-li');//列表内容
-var oNavContent = document.getElementById('left-items-content');//内容区域
+var oNavItemLi = document.querySelectorAll('.left-items-li'); //列表内容
+var oNavContent = document.getElementById('left-items-content'); //内容区域
 
 oNavItemLi.forEach((item, index) => {
-    item.onmouseover = function (e) {
+    item.onmouseover = function(e) {
         oNavContent.style.display = 'block'
         oNavContent.innerText = oNavContentData[index].title
     }
-    
+    item.onmouseout = function(e) {
+        oNavContent.style.display = 'none'
+        oNavContent.innerText = ''
+    }
 });
-// oNavItemBox.onmouseout = function (e) {
-//     oNavContent.style.display = 'none'
-//     // oNavContent.innerText = oNavContentData[index].title
-// }
