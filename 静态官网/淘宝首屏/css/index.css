@@ -12,32 +12,40 @@
     color: #f40;
 }
 .web-shop{
-    width: 100%
+    min-width: 1170px 
 }
-/* 同步导航部分 */
-.top{
+/* 头部导航部分 */
+.web-shop .header{
+    width: 100%;
     background-color:#F5F5F5;
-    height:35px;  
-    padding: 0 100px;
-    line-height: 35px;
+}
+.web-shop .header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1168px;
+    height: 35px;  
+    margin: 0 auto;
+    line-height: 35px;
 }
-.top .nav {
+.web-shop .header .container .nav {
     display: flex;
 }
-.top .nav li{
-    padding: 0 12px;
+.web-shop .header .container .nav li{
+    padding: 0 14px;
     display: flex;
 }
-.top .nav li a{
+.web-shop .header .container .nav li a{
+    position: relative;
     color:#6c6c6c;
     font-size: 12px;
     cursor: pointer; 
 }
-.top .nav li .icon-bottom{
-    display: inline-block;
+.web-shop .header .container .nav li .arrow::after{
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 1px;
     width: 0px;
     height: 0px;
     margin-top: 15px;
@@ -47,14 +55,15 @@
     border-left: 4px solid transparent;
     border-bottom: 3px solid transparent;
 }
-.top .nav .orange a{
+.web-shop .header .container .nav .orange a{
     color:#f40;
 }
-.top .nav a:hover{
+.web-shop .header .container .nav a:hover{
     color:#f40;
     text-decoration: underline;
 }
 
+/* 内容区域 */
 .body{
     width: 1167px;
     margin: 0 auto;
@@ -127,6 +136,8 @@
     height: 30px;
     padding: 0 15px;
     color: #fff;
+    font-size: 16px;
+    font-weight: 500;
 }
 .body .nav .left-nav{
     width: 190px;
@@ -143,6 +154,7 @@
     height: 500px;
 }
 .body .shop .left-items{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,9 +165,26 @@
     border-top: 0;
     box-sizing: border-box;
 }
-.body .shop .left-items li{
+.body .shop .left-items .left-items-li{
     text-align: center;
     padding: 8px 15px;
+}
+.body .shop .left-items .left-items-li:hover{
+    background: #ff4400;
+    color: #fff;
+}
+.body .shop .left-items .left-items-li:hover a{
+    color: #fff;
+}
+.body .shop .left-items .left-items-content{
+    position: absolute;
+    top: 0;
+    left: 190px;
+    /* display: none; */
+    width: 500px;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
 }
 /* 图片区域--------------------------------------------------- */
 .body .shop .img-box{
