@@ -7,49 +7,124 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        .box {
+            width: 300px;
+            border-radius: 10px;
+            border: 1px solid red;
+            padding: 20px;
 
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .box:last-child {
+            margin-bottom: 0;
+        }
+
+        .info {
+            width: 100%;
+            flex: 1;
+            /* 弹性盒子，flex:1 压缩 */
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-left: 10px;
+        }
+
+        .video {
+            width: 100%;
+            height: 100px;
+            background: #ccc;
+            margin-top: 10px;
+        }
+
+        .text {
+            /* position: relative; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .text .btn {
+            /* position: absolute; */
+            /* 弹性盒子，flex:0 不压缩 */
+        }
+
+        .text .icon {
+            margin-right: 10px;
+            color: #fff;
+            background: #f40;
+            padding: 2px;
+            font-size: 12px;
+
+        }
+        .text-left{
+            display: flex;
+        }
+
+        .text .title {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .text .time {
+            margin-right: 10px;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
-    <script>
-        (()=>{
-            let ratio = 0;
-            const { screen } = window;
-            const ua = navigator.userAgent.toLowerCase();
-            console.log('screen:', screen);
-            console.log('------');
-            
-            console.log('ua:', ua);
-            
-            
-            if (window.devicePixelRatio !== undefined) {
-                ratio = window.devicePixelRatio;
-                console.log('进入了11:',ratio);
-                console.log('该 Window 属性 devicePixelRatio 能够返回当前显示设备的物理像素分辨率与 CSS 像素分辨率的比率。此值也可以解释为像素大小的比率：一个 CSS 像素的大小与一个物理像素的大小的比值。简单地说，这告诉浏览器应该使用多少个屏幕的实际像素来绘制单个 CSS 像素。无法通知该值。由于没有可用于检测像素密度变化的回调或事件，因此唯一的方法是定期检查其 devicePixelRatio 值是否已更改。不要经常这样做，否则会影响性能。:',window.devicePixelRatio);
-            } else if (~ua.indexOf('msie')) {
-                // deviceXDPI 属性返回显示屏幕的每英寸水平点数。
-                // logicalXDPI 属性可返回显示屏幕每英寸的水平方向的常规点数。
-                if (screen.deviceXDPI && screen.logicalXDPI) {
-                    console.log('每英寸点数:',screen.deviceXDPI,'常规点数',screen.logicalXDPI);
-                    ratio = screen.deviceXDPI / screen.logicalXDPI;
-                    console.log('进入了2222:',ratio);
-                }
-            } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
-                // outerwidth 属性是一个只读的整数，声明了整个窗口的宽度。
-                // 只读属性，声明了窗口的文档显示区的高度和宽度，以像素计。这里的宽度和高度不包括菜单栏、工具栏以及滚动条等的高度。
-                ratio = window.outerWidth / window.innerWidth;
-                console.log('进入了33:',ratio);
-            }
-            if (ratio) {
-                ratio = Math.round(ratio * 100);
-            }
-            console.log('radio:', ratio);
-            if (ratio !== 100 && ratio !== 200) {
-                console.log('radio:', ratio);
-            }
-        })()
-    </script>
+
+    <div class="box" v-for="item in List">
+        <div class="info">
+            <div>打算看不到巴萨的博健啊斯巴达克把伤口就不多</div>
+            <!-- <div v-if="视频地址" :url='视频地址' class="video">我是视频</div> -->
+            <div class="text">
+                <div class="text-left">
+                    <div class="icon" style="margin-right: ;">热门</div>
+                    <div class="title">主题名称</div>
+                    <div class="time">50分钟</div>
+                </div>
+
+                <div class="btn">播</div>
+            </div>
+        </div>
+        <!-- <img v-if="图片地址" class="img" :src="图片地址" alt=""> -->
+    </div>
+    <div class="box" v-for="item in List">
+        <div class="info">
+            <div>打算看不到巴萨的博健啊斯巴达克把伤口就不多</div>
+            <!-- <div v-if="视频地址" :url='视频地址' class="video">我是视频</div> -->
+            <div class="text">
+                <div class="icon" style="margin-right: ;">热门</div>
+                <div class="title">主题名称</div>
+                <div class="time">50分钟</div>
+                <div class="btn">播</div>
+            </div>
+        </div>
+        <img v-if="图片地址" class="img" :src="图片地址" alt="">
+    </div>
+    <div class="box" v-for="item in List">
+        <div class="info">
+            <div>打算看不到巴萨的博健啊斯巴达克把伤口就不多</div>
+            <div v-if="视频地址" :url='视频地址' class="video">我是视频</div>
+            <div class="text">
+                <div class="icon" style="margin-right: ;">热门</div>
+                <div class="title">主题名称</div>
+                <div class="time">50分钟</div>
+                <div class="btn">播</div>
+            </div>
+        </div>
+        <!-- <img v-if="图片地址" class="img" :src="图片地址" alt=""> -->
+    </div>
 </body>
 
 </html>
