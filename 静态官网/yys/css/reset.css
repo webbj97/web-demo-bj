@@ -1,0 +1,74 @@
+/*
+ * @Author: 卓文理
+ * @Email: zhuowenligg@gmail.com
+ * @Date: 2019-07-31 16:02:38
+ */
+html {
+    line-height: 1.15;
+
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    outline: none;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+p,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
+    font-size: 100%;
+    font-weight: normal;
+}

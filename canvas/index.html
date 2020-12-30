@@ -1,0 +1,153 @@
+<!--
+ * @desc:
+ * @Author: 余光
+ * @Email: webbj97@163.com
+ * @Date: 2020-07-27 16:27:42
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            margin: 100px auto;
+            width: 200px;
+            height: 300px;
+            background: #ccc;
+        }
+
+        .poster {
+            width: 400px;
+            height: 700px;
+            background: #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f5da55;
+        }
+
+        .poster .title {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .poster .content {
+            width: 100%;
+            height: 300px;
+            background: #f40;
+        }
+
+        .poster .footer {
+            width: 100%;
+            height: 100px;
+            background: #f5da55;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="capture" class="poster" style="padding: 10px; width: 300px;">
+        <div class="title">aaa</div>
+        <div class="content">dadasda</div>
+        <div id="qrcode"></div>
+    </div>
+
+    <a class="wrapper">
+
+    </a>
+
+    <div id="btn" style="width: 100px; height: 40px; border: 1px solid red;">
+        onclick
+    </div>
+
+
+
+    <script src='./qrcode.min.js'></script>
+    <script src='../node_modules/html2canvas/dist/html2canvas.js'></script>
+    <script>
+        var qrcode = new QRCode(
+            //二维码存放的div
+            document.getElementById("qrcode"), {
+                width: 96, //设置宽高
+                height: 96
+            }
+        )
+
+        //根据input框的值生成二维码
+        qrcode.makeCode(`https://tbgr.huanleguang.com/activity/noauth?shop_nick=${encodeURI("道理门")}#/mobile/invite-two`);
+
+        function test(params) {
+            let imgHeight = window.document.querySelector('#capture').offsetHeight // 获取DOM高度
+            let imgWidth = window.document.querySelector('#capture').offsetWidth // 获取DOM宽度
+            let scale = window.devicePixelRatio || 2; // 分辨率
+
+            const parmas = {
+                useCORS: true,
+                backgroundColor: 'null',
+                height: imgHeight,
+                width: imgWidth,
+            };
+            html2canvas(document.getElementById('capture'), parmas).then((canvas) => {
+                console.log('canvas:', canvas);
+                document.body.appendChild(canvas)
+            });
+        }
+
+        function newCanvas() {
+            let imgHeight = window.document.querySelector('#capture').offsetHeight // 获取DOM高度
+            let imgWidth = window.document.querySelector('#capture').offsetWidth // 获取DOM宽度
+            let scale = window.devicePixelRatio || 2; // 分辨率
+            html2canvas(document.getElementById('capture'), {
+                useCORS: true,
+                scale: scale,
+                width: imgWidth,
+                height: imgHeight
+            }).then(canvas => {
+                // canvas为转换后的Canvas对象
+                // let oImg = new Image();
+                // oImg.src = canvas.toDataURL();  // 导出图片
+                // document.querySelector('.wrapper').appendChild(oImg);  // 将生成的图片添加到body
+
+                console.log('canvas.toDataURL():', canvas.toDataURL());;
+
+                var imgData = canvas.toDataURL("image/png");
+                document.body.appendChild(canvas)
+                downloadImg(imgData, '海报');
+            });
+        }
+
+        const btn = document.querySelector('#btn');
+        btn.onclick = test;
+
+        function downloadImg(url, name) {
+            console.log('1:', 1);
+            var a = document.createElement("a"); // 生成一个a元素
+            a.href = url; // 将生成的URL设置为a.href属性
+            a.download = name || "photo"; // 设置图片名称
+
+            var event = new MouseEvent("click"); // 创建一个单击事件
+            a.dispatchEvent(event); // 触发a的单击事件
+            a = null; // 置空
+
+            // 解决跨域 Canvas 污染问题
+            // image.setAttribute("crossOrigin", "anonymous");
+
+
+            // let aLink = document.createElement("a");
+            // aLink.style.display = "none";
+            // aLink.href = downloadUrl;
+            // aLink.download = "监控详情.png";
+            // // 触发点击-然后移除
+            // document.body.appendChild(aLink);
+            // aLink.click();
+            // document.body.removeChild(aLink);
+        }
+    </script>
+</body>
+
+</html>

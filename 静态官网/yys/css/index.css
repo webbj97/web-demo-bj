@@ -1,0 +1,207 @@
+.main-yys {
+    color: #000;
+}
+/* 头部样式 */
+.main-yys__header {
+    overflow: hidden;
+
+    margin-top: 59px;
+    width: 100%;
+    min-width: 1280px;
+    max-width: 1920px;
+    height: 784px;
+}
+.main-yys__header .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    width: 100%;
+    min-width: 1280px;
+    max-width: 1920px;
+    height: 60px;
+
+    background: url("../img/nav.jpg") center top no-repeat;
+}
+.main-yys__header .nav ul {
+    display: flex;
+
+    margin: 0 auto;
+    width: 1100px;
+    height: 60px;
+
+    color: #fff;
+
+    align-items: center;
+}
+.main-yys__header .nav ul li {
+    display: flex;
+
+    width: 120px;
+    height: 100%;
+
+    align-items: center;
+}
+.main-yys__header .nav ul li:hover {
+    border: 1px solid #a3854e;
+
+    background: #bea069;
+
+    cursor: pointer;
+}
+.main-yys__header .nav ul li a {
+    width: 100%;
+    height: 22px;
+
+    text-align: center;
+
+    color: #fff;
+}
+.main-yys__header .nav ul li:not(:last-child) a {
+    border-right: 1px solid #fff;
+}
+.main-yys__header .banner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+.main-yys__header .news {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 240px;
+
+    background: rgba(0,0,0,.2);
+
+    justify-content: center;
+}
+.new-container {
+    display: flex;
+
+    margin: 0 auto;
+    width: 1100px;
+}
+.news__left {
+    margin-top: -47px;
+    width: 145px;
+    height: 287px;
+
+    background-image: url(https://yys.res.netease.com/pc/gw/20180913151832/img/spriter/index_z_8ea32f7.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.news__right {
+    display: flex;
+
+    border: 1px solid red;
+    padding: 20px;
+    width: 1021px;
+    height: 240px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.news__right .item {
+    padding: 20px 20px 16px;
+    width: 210px;
+    height: 160px;
+
+    font-size: 12px;
+
+    background: #fff;
+}
+.news__right .item p {
+    margin-bottom: 10px;
+    height: 54px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+/* 娱乐模块 */
+.mian-yys__enter {
+    position: relative;
+}
+.mian-yys__enter .enter-contaienr {
+    margin: 0 auto;
+    width: 1100px;
+}
+.mian-yys__enter .enter-title {
+    display: block;
+
+    position: absolute;
+
+    width: 55px;
+    height: 140px;
+
+    background-image: url(https://yys.res.netease.com/pc/gw/20180913151832/img/spriter/index_z_8ea32f7.png);
+    background-repeat: no-repeat;
+    background-position: -1067px -532px;
+}
+.mian-yys__enter .enter-bookmark {
+    overflow: hidden;
+
+    position: relative;
+
+    margin-left: 60px;
+    border: 1px solid red;
+    padding-top: 20px;
+    width: 1040px;
+    height: 536px;
+}
+.enter-bookmark .slider-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+    width: 50px;
+    height: 50px;
+
+    background: #ccc;
+
+    transform: translateY(-50%);
+}
+.enter-bookmark .slider-btn-right {
+    right: 0;
+}
+.enter-bookmark .slider-btn-left {
+    left: 0;
+}
+.enter-bookmark .slider-wrap {
+    display: flex;
+
+    position: absolute;
+
+    transition: all .4s;
+    transform: translate(0, 0);
+
+    align-items: center;
+}
+.enter-bookmark .slider-wrap .slider-item {
+    margin-right: 10px;
+    width: 220px;
+    height: 516px;
+
+    transition: all .3s;
+
+    cursor: pointer;
+}
+.enter-bookmark .slider-wrap .slider-item:hover {
+    transform: translate(0, -20px);
+}
+/* 底部样式 */
+.main-yys__footer {
+    position: relative;
+
+    width: 100%;
+    height: 927px;
+
+    background: url("../img/footer.png") center no-repeat;
+    background-size: 1920px 927px;
+}
