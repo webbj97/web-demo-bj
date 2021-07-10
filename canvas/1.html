@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+
+    <script>
+        // fillStyle 填充颜色
+        // fillRect 填充方式（坐标）
+        // moveTo 路径
+        var oCanvas = document.getElementById("myCanvas");
+        // 然后，创建 context 对象：
+        // 对象是内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+        // var ctx = oCanvas.getContext("2d");
+        // ctx.fillStyle = "#FF0000";
+        let ctx = oCanvas.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(100,100);
+        ctx.stroke();
+
+        let aaa = oCanvas.getContext("2d");
+        aaa.moveTo(0, 0);
+        aaa.lineTo(200,100);
+        aaa.stroke();
+
+        // 1. 学会了绘制乐园
+        // ctx.beginPath();
+        // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        // ctx.stroke();
+
+    </script>
+</body>
+
+</html>

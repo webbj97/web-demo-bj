@@ -69,6 +69,22 @@
 
     cursor: pointer;
 }
+/* 新添加类名--起始 */
+.web-shop .header .container .nav li .has-s-l:hover .s-l {
+    display: block;
+}
+.web-shop .header .container .nav li a .s-l {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100px;
+
+    background: #fff;
+}
+/* 新添加类名--结束 */
 .web-shop .header .container .nav li .arrow::after {
     content: "";
 

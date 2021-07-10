@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            display: flex;
+
+            padding: 40px;
+
+            background: #43a047;
+        }
+
+        .content {
+            width: 400px;
+        }
+
+        .box {
+            position: relative;
+
+            width: 400px;
+            height: 400px;
+        }
+
+        .back-model {
+            display: flex;
+
+            width: 100%;
+            height: 100%;
+
+            background: #1f5768;
+
+            justify-content: flex-end;
+        }
+
+        .font-model {
+            display: flex;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 青蛙盒子 */
+        .bg {
+            border: 3px solid transparent;
+            border-radius: 40px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .font-model .bg {
+            background-repeat: no-repeat;
+            background-size: 80% 80%;
+        }
+
+        .font-green {
+            background: url("./frog-green.svg") center;
+        }
+
+        .font-red {
+            background: url("./frog-red.svg") center;
+        }
+
+        .font-yellow {
+            background: url("./frog-yellow.svg") center;
+        }
+
+        .bg-green {
+            border-color: #69da6b;
+        }
+
+        .bg-red {
+            border-color: #f66a68;
+        }
+
+        .bg-yellow {
+            border-color: #f9fa40;
+        }
+
+        #css {
+            position: relative;
+
+            margin-right: 50px;
+            padding: 10px 30px;
+            height: 260px;
+
+            background: #e0e0e0;
+
+            transition: .4s all;
+        }
+
+        .line-numbers {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            padding: 10px 5px;
+            width: 20px;
+            height: 260px;
+
+            background: #ccc;
+        }
+
+        #code {
+            display: block;
+            overflow: auto;
+
+            margin-left: 32px;
+            border: none;
+            height: 24px;
+
+            font-size: 12px;
+            white-space: nowrap;
+
+            outline: none;
+
+            resize: none;
+        }
+
+        #next {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+
+            border-color: #d92424;
+            border-radius: 3px;
+            padding: 0 15px;
+            height: 26px;
+
+            text-decoration: none;
+
+            color: #fff;
+            background: #d92424;
+
+            outline: 0;
+        }
+
+        .animation {
+            animation-name: shake;
+            animation-duration: 1s;
+
+            animation-fill-mode: both;
+        }
+
+        @keyframes shake {
+            100%,
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translate3d(-10px, 0, 0);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translate3d(10px, 0, 0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="editor">
+            <div class="tip">
+                <p>tip：justify-content</p>
+            </div>
+            <div id="css">
+                <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</div>
+                <pre id="before">#pond {
+    display: flex;</pre>
+                <textarea id="code" class="code" autofocus="" autocapitalize="none" style="height: 24px;"></textarea>
+                <pre id="after">}</pre>
+                <button id="next" class="translate disabled">Next</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="back-model">
+                <div class="bg bg-green"></div>
+            </div>
+            <div class="font-model">
+                <div class="bg font-green"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // 输入框
+        const oInput = document.getElementById('code');
+        // 输入监听
+        oInput.oninput = function (e) {
+            const oFontModel = document.getElementsByClassName('font-model')[0];
+            const {value} = this;
+            // 将输入的内容通过冒号分为key和value
+            const res = value.split(':');
+            if (res[1]) {
+                oFontModel.style[res[0]] = res[1]
+            } else {
+                oFontModel.style = null;
+            }
+        }
+        // 按键监听
+        let timer = null;
+        oInput.onkeydown = function (e) {
+            const {keyCode} = e;
+            if (+keyCode === 13) {
+                const oCss = document.getElementById('css');
+                // 简易锁
+                if (oCss.className === 'animation' || timer) return;
+                // 添加动画class，3s清空
+                oCss.className = 'animation';
+                timer = setTimeout(() => {
+                    oCss.className = '';
+                    timer = null;
+                }, 3000);
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
